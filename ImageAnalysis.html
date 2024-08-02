@@ -4,19 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>Image Analysis with Fiji</title>
-<link rel="stylesheet" href="css/reveal.css">
-<link rel="stylesheet" href="css/theme/cci.css">
+<link rel="stylesheet" href="dist/reveal.css">
+<link rel="stylesheet" href="dist/theme/cci.css">
 <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
 <!-- Theme used for syntax highlighting of code -->
-<link rel="stylesheet" href="lib/css/zenburn.css">
-<!-- Printing and PDF exports -->
-<script>
-var link = document.createElement( 'link' );
-link.rel = 'stylesheet';
-link.type = 'text/css';
-link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-document.getElementsByTagName( 'head' )[0].appendChild( link );
-</script>
+<link rel="stylesheet" href="plugin/highlight/zenburn.css">
 </head>
 <body>
 <div class="reveal">
@@ -830,8 +822,7 @@ close("*");
 <!--img style="position:fixed;bottom:1em;left:1em;" src="img/logo_tw.png" width="20%"-->
 </div>
 
-<script src="lib/js/head.min.js"></script>
-<script src="js/reveal.js"></script>
+<script src="dist/reveal.js"></script>
 
 <script>
 // More info about config & dependencies:
@@ -849,8 +840,6 @@ dependencies: [
 ],
 menu: {
 hideMissingTitles: true,
-themes: false,
-transitions: false,
 //markers: true,
 numbers: true,
 openButton: false,
