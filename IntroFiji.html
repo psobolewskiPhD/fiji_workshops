@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>Image Analysis with Fiji</title>
+<title>Introduction to Image Analysis with Fiji</title>
 <link rel="stylesheet" href="dist/reveal.css">
 <link rel="stylesheet" href="dist/theme/cci.css">
 <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
@@ -27,8 +27,18 @@
 
 <section data-menu-title="Title">
 <h2>Introduction to Image Analysis with Fiji</h2>
-<h4>Erick Martins Ratamero (he/him)<br>Manager, Imaging Applications - Research IT</h4>
+<h4>Peter Sobolewski (he/him)<br>Systems Analyst, Imaging Applications - Research IT</h4>
 <p class="subtle">Use <i class="fa fa-arrow-right"></i> to advance the slide</p>
+</section>
+
+<section data-menu-title="Before anything else..." data-state="intro0a"><style>.intro0a header:after { content: "Before anything else..."; }</style>
+	<p>Thanks to:</p>
+	<ul>
+	<li>Erick Ratamero (JAX), who prepared the original of <i>these</i> materials</li>
+	<li>Dave Mason, (formerly) from the University of Liverpool, who prepared the original materials Erick adapted</li>	
+	
+	<li>Unfortunately Dave's original slides are lost to time, but they looked very much like these.</li>
+	</ul>
 </section>
 
 <section data-menu-title="Links and Resources" data-state="intro0"><style>.intro0 header:after { content: "Links and Resources"; }</style>
@@ -41,15 +51,6 @@
 	<li><a target="_blank" href="https://jacksonlaboratory.sharepoint.com/sites/ComputationalCommunity/SitePages/Computational-Image-Analysis.aspx">Computational Image Analysis on MyJAX</a></li></ul>
 </ul>
 </section>
-
-<section data-menu-title="Before anything else..." data-state="intro0a"><style>.intro0a header:after { content: "Before anything else..."; }</style>
-	<ul>
-	<li>HUGE thanks to Dave Mason (formerly) from the University of Liverpool</li>	
-	
-	<li>You can find his original slides at <a target="_blank" href="http://pcwww.liv.ac.uk/~cci/reveal_ia/ImageAnalysisWithFiji.html">https://pcwww.liv.ac.uk/~dnmason/ia.html</a> (and then realise they look very much like these)</li>
-	</ul>
-</section>
-
 
 <section data-menu-title="Opening Test Data" data-state="fiji2a"><style>.fiji2a header:after { content: "Opening Test Data"; }</style>
 <p>Throughtout the presentation, test data will look like this: <a href="material/01-Photo.tif"><code>01-Photo.tif</code></a></p>
@@ -339,7 +340,7 @@
 <li><a href="#/86">Colocalisation</a></li>
 <li><a href="#/95">Tracking</a></li>
 <li><a href="#/70">Batch Processing</a></li>
-<li><a href="#/79">Scripting 101</a></li>
+<li><a href="#/59">Scripting 101</a></li>
 <li><a href="#/110">Stitching</a></li>
 </ul>
 </section>
@@ -430,7 +431,7 @@
 
 <!--END of TASK 7 -->
 
-
+<!-- Scripting 101 Start-->
 
 <section data-menu-title="Scripting" data-state="apps24z"><style>.apps24z header:after { content: ""; }</style>
 <h1>Scripting</h1>
@@ -454,7 +455,8 @@
 </section>
 
 <section data-state="apps24"><style>.apps24 header:after { content: "Scripting"; }</style>
-<ul style="font-size:70%" class="twothirds">
+<div class="left twothirds">
+<ul style="font-size:70%">
 <li>(If necessary <code>[Image > Hyperstacks > Stack to Hyperstack]</code>)</li>
 <li>Open the channels tool <code>[Image > Color > Channels Tool]</code> and set the mode to <code>grayscale</code></li>
 <li>Run <code>[Image > Type > RGB color]</code></li>
@@ -467,7 +469,10 @@
 <li>Run <code>[Image > Stacks > Make Montage]</code> change the border width to 3 then hit OK</li>
 <!-- <li>Run <code>[File > Save As > PNG]</code> and save the file in the output directory</li> -->
 </ul>
-<img class="third" src="img-ia/script02.png">
+</div>
+<div class="third right">
+<img src="img-ia/script02.png">
+</div>
 <p class="clear fragment">Got it? Have a look at the Macro Recorder and see if you can see the commands you ran</p>
 </section>
 
@@ -522,7 +527,7 @@ close("*");
 </ul>
 </section>
 
-
+<!-- Scripting 101 end -->
 
 <!-- ---------------------- APPLICATIONS COLOCALISTATION -------------------------- -->
 
@@ -823,29 +828,27 @@ close("*");
 </div>
 
 <script src="dist/reveal.js"></script>
+<script src="plugin/menu/menu.js"></script>
+<script src="plugin/highlight/highlight.js"></script>
+<script src="plugin/zoom/zoom.js"></script>
+<script src="plugin/markdown/markdown.js"></script>
 
 <script>
 // More info about config & dependencies:
 // - https://github.com/hakimel/reveal.js#configuration
 // - https://github.com/hakimel/reveal.js#dependencies
 Reveal.initialize({
-    controls: false,
+    controls: true,
+	controlsLayout: 'edges',
 	slideNumber: true, //-- Added for development
-dependencies: [
-{ src: 'plugin/markdown/marked.js' },
-{ src: 'plugin/markdown/markdown.js' },
-{ src: 'plugin/notes/notes.js', async: true },
-{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-{ src: 'plugin/menu/menu.js' }
-],
-menu: {
-hideMissingTitles: true,
-//markers: true,
-numbers: true,
-openButton: false,
-titleSelector: 'span.menu-title'
-
-}
+	hashOneBasedIndex: true,
+	hash: true,
+	respondToHashChanges: true,
+	plugins: [ RevealZoom, RevealHighlight, RevealMarkdown, RevealMenu ],
+	menu: {
+		hideMissingTitles: true,
+		openSlideNumber: true,
+	}
 });
 </script>
 </body>
