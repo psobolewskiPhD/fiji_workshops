@@ -1,4 +1,0 @@
-## Page title
-
-		alou glaucio
- 
