@@ -57,7 +57,7 @@
 <p>Throughout the presentation, test data will look like this: <a href="material/01-Photo.tif"><code>01-Photo.tif</code></a></p>
 <img class="half fragment" src="img-ia/material_01.png"/>
 <img class="half fragment" src="img-ia/material_02.png"/>
-<p>(Paste in the URL in the resulting box)</p>
+<p class="fragment">(Paste in the URL in the resulting box)</p>
 <p>Exercises will be provided in-line, as links to PDFs—right-click and open in a new tab.</p>
 <p class="fragment">Commands on the Fiji menu will look like: <code>[File > Save]</code></p>
 </section>
@@ -178,7 +178,7 @@
 <img class="twothirds" src="img-ia/intensity_11.png"/>
 </section>
 <section data-state="fiji3p"><style>.fiji3p header:after { content: "Understanding Intensity Histograms"; }</style>
-<p>Fluorescent micrographs will typically have a much more predicatble distribution:</p>
+<p>Fluorescent micrographs will typically have a much more predictable distribution:</p>
 <img class="twothirds" src="img-ia/intensity_12.png"/>
 </section>
 <section data-state="fiji3p"><style>.fiji3p header:after { content: "Understanding Intensity Histograms"; }</style>
@@ -234,7 +234,7 @@
 
 <!--BEGINNING of TASK 3 -->
 
-<section data-state="fiji3"><style>.fiji3 header:after { content: "Measurements"; }</style>
+<section data-state="fiji3z"><style>.fiji3z header:after { content: "Measurements"; }</style>
 <div>
 <h2>Exercise 3</h2>
 <ul>
@@ -245,6 +245,21 @@
 
 <!--END of TASK 3 -->
 
+<section data-state="fiji3z"><style>.fiji3z header:after { content: "Measurements"; }</style>
+	<h2>What if my image is uncalibrated?</h2>
+	<div class="half left">
+	<ul>
+	<li class="fragment" data-fragment-index="1">If you know the pixel size, use <code>[Image > Properties...]</code></li>
+	<img class="fragment" data-fragment-index="1" src="img-ia/image_properties.png"/>
+	</ul>
+	</div>
+	<div class="half right">
+	<ul>	
+	<li class="fragment" data-fragment-index="2">If you have a reference, mark it with the Line tool and use <code>[Analyze > Set Scale...]</code></li>
+	<img class="fragment" data-fragment-index="2" src="img-ia/analyze_set_scale.png"/>
+	</ul>
+	</div>
+	</section>
 
 <section data-menu-title="Stacks" data-state="fiji5z"><style>.fiji5z header:after { content: ""; }</style>
 <h1>Stacks</h1>
@@ -264,10 +279,20 @@
 <p class="fragment" data-fragment-index="1">Convert between stack types with the <code>[Image > Hyperstack]</code> menu</p>
 </section>
 
+<section data-menu-title="Channel Display Modes" data-state="fiji6"><style>.fiji6 header:after { content: "Channel Display Modes"; }</style>
+<h2>Multichannel images are handled as stacks</h2>
+
+	<p>Interacting with channels is so common that there is a dedicated Channels Tool for additional controls:</p>
+<ul><li><code>[Image > Color > Channels Tool]</code></li>
+	<p>Other useful menu options:</p>
+	<li><code>[Image > Type > RGB Color]</code>: convert from 3 channel stack to RGB</li>
+	<li><code>[Image > Type > RGB Stack]</code>: split RGB image into 3 channel stack</li>
+</ul>
+	</section>
 
 <!--BEGINNING of TASK 4 -->
 
-<section data-menu-title="Channel Display Modes" data-state="fiji6"><style>.fiji6 header:after { content: "Channel Display Modes"; }</style>
+<section data-state="fiji6"><style>.fiji6 header:after { content: "Channel Display Modes"; }</style>	
 <h2>Exercise 4</h2>
 <ul>
 <li>Open <code><a href="material/Task4.pdf">Task4.pdf</a></code> and follow the instructions there.</li>
@@ -278,7 +303,7 @@
 <!--END of TASK 4 -->
 
 
-<section data-menu-title="Digital Imaging and Colour" data-state="fiji7z"><style>.fiji7z header:after { content: ""; }</style>
+<section data-menu-title="Digital Imaging and Color" data-state="fiji7z"><style>.fiji7z header:after { content: ""; }</style>
 <h1>Color in Digital Imaging</h1>
 <h4>What is color? How and when to use LUTs</h4>
 </section>
