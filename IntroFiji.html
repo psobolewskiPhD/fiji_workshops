@@ -399,6 +399,7 @@
 
 <section data-state="apps10"><style>.apps10 header:after { content: "Segmentation: Theory"; }</style>
 <p>Segmentation is the separation of an image into areas of interest and areas that are not of interest</p>
+<p><i>Semantic</i> segmentation aims to assign each pixel to a <i>class</i>, e.g. foreground vs. background</p>
 <img class="left half" src="img-ia/seg_03.png"/><img data-fragment-index="1" class="fragment right half" src="img-ia/seg_04.png"/>
 <p data-fragment-index="1" class="clear fragment">The end point for most segmentation is a binary mask (false/true, 0/255)</p>
 </section> 
@@ -407,7 +408,36 @@
 <img class="half" src="img-ia/seg_05.png"/>
 <p>We use a <i>Threshold</i> to pick a cutoff.</p>
 </section> 
-
+<section data-state="apps10"><style>.apps10 header:after { content: "Segmentation: Theory"; }</style>
+	<div class="left half">
+	<p>A background/foreground binary mask (false/true, 0/255) may be sufficient for some analysis.</p>
+	<img src="img-ia/seg_09.png"/>
+	</div>
+	<div class="fragment right half">
+		<p>Or we may want to identify individual objects (instance segmentation)</p>
+		<img src="img-ia/seg_CCA_5.png"/>
+	</div>	
+	</section> 
+<section data-state="apps10"><style>.apps10 header:after { content: "Segmentation: Theory"; }</style>
+	<p>One approach to identifying individual objects when given a binary mask is <i>Connected Component Analysis/Labeling</i> (CCA)</p>
+	<p>This approach assigns pixels that are touching (connected) to individual object:</p>
+	<table>
+	<tr><td>4-way connected<br>
+		<code>
+		- + -<br>
+		+ + +<br>
+		- + -<br>
+		</code>
+	</td>
+	<td>8-way connected<br>		
+		<code>
+		+ + +<br>
+		+ + +<br>
+		+ + +<br>
+		</code></td>
+	</table>
+	<p>If this results in merged <i>objects</i> due to touching, then "watershed" approach is frequently used to define boundaries.</p>
+	</section> 
 
 <!--BEGINNING of TASK 6 -->
 
