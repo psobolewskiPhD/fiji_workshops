@@ -390,19 +390,22 @@
 <h4>What is segmentation? thresholding, Connected Component Analysis</h4>
 </section>
 
-<section data-state="apps10y"><style>.apps10y header:after { content: "Segmentation: Before we start"; }</style>
-<p>Fiji has an odd way of dealing with masks</p>
-<img class="third" src="img-ia/setupFiji1.png"/>
-<img class="third" src="img-ia/setupFiji2.png"/>
-<p>Run <code>[Process > Binary > Options]</code> and check <code>Black Background</code>. Hit OK.</p>
-</section> 
-
 <section data-state="apps10"><style>.apps10 header:after { content: "Segmentation: Theory"; }</style>
-<p>Segmentation is the separation of an image into areas of interest and areas that are not of interest</p>
-<p><i>Semantic</i> segmentation aims to assign each pixel to a <i>class</i>, e.g. foreground vs. background</p>
-<img class="left half" src="img-ia/seg_03.png"/><img data-fragment-index="1" class="fragment right half" src="img-ia/seg_04.png"/>
-<p data-fragment-index="1" class="clear fragment">The end point for most segmentation is a binary mask (false/true, 0/255)</p>
+<p>Segmentation is the separation of an image into regions of interest<br>
+<i>Semantic</i> segmentation assigns each pixel to a <i>class</i>, e.g. foreground vs. background</p>
+<div class="left half">
+<img height="387" width="365" src="img-ia/seg_03.png"/>
+</div>
+<div class="right half"><img data-fragment-index="1" height="387" width="365" class="fragment" src="img-ia/seg_04.png"/>
+</div>
+<p class="clear fragment">The end point for most segmentation is a binary mask (false/true, 0/255)</p>
 </section> 
+<section data-state="apps10y"><style>.apps10y header:after { content: "Segmentation: Before we start"; }</style>
+	<p>Fiji has an odd way of dealing with masks</p>
+	<img class="third" src="img-ia/setupFiji1.png"/>
+	<img class="third" src="img-ia/setupFiji2.png"/>
+	<p>Run <code>[Process > Binary > Options]</code> and check <code>Black Background</code>. Hit OK.</p>
+	</section> 
 <section data-state="apps10"><style>.apps10 header:after { content: "Segmentation: Theory"; }</style>
 <p>For most applications, intensity-based thresholding works well. This relies on the signal being higher intensity than the background.</p>
 <img class="half" src="img-ia/seg_05.png"/>
@@ -446,19 +449,29 @@
 <p>You will need these images: <a href="material/07-nuclei.tif"><code>07-nuclei.tif</code></a> and <a href="material/08-nucleiMask.tif"><code>08-nucleiMask.tif</code></a></p>
 </section>
 
+<section data-state="apps13"><style>.apps13 header:after { content: "Segmentation: Making Measurements"; }</style>
+	<p>Analyze Particles comes with the option to <code>Display Results</code></p>
+	<img class="third left" src="img-ia/seg_CCA_6.png"/>
+	<img data-fragment-index="2" class="third left fragment" src="img-ia/seg_CCA_8.png"/>
+	<img class="third fragment left" data-fragment-index="1" src="img-ia/seg_CCA_7.png"/>
+	<ul><li>The results table will have a column for anything selected in <code>[Analyze > Set Measurements]</code> and one row per object</li>
+	<li>Measurements (including intensity - labelled purple above) are made on the mask!</li></ul>
+	</section>
+<section data-state="apps13"><style>.apps13 header:after { content: "Segmentation: Making Measurements"; }</style>
+<p>To apply measurements to the original image: check <code>Add to Manager</code> in Analyze Particles, open the <a href="material/07-nuclei.tif"><code>original image</code></a>, then run <code>[More > Multi Measure]</code></p>
+<img class="third" src="img-ia/seg_CCA_9b.png"/>
+<img class="third fragment" src="img-ia/seg_CCA_9.png"/>
+<img class="third fragment" src="img-ia/seg_CCA_9d.png"/>
+<p>Don't forget <code>[Analyze > Set Measurements]</code> to pick parameters</p>
+</section>
 
 <section data-state="apps14"><style>.apps14 header:after { content: "Segmentation: Visualisation"; }</style>
-
-<p>Example visualisation of woundhealing</p>
-<!-- <a href="https://cci.liv.ac.uk/img/gallery/woundhealing.mp4" target="_blank"> -->
-
-	<video loop data-autoplay class="half" src="https://cci.liv.ac.uk/img/gallery/woundhealing.mp4"></video>
-	<!-- </a> -->
-	<p>From the <a href="http://cci.liv.ac.uk/gallery.html" target="_blank">CCI website gallery</a>. Data c/o <a href="https://www.liverpool.ac.uk/integrative-biology/staff/daimark-bennett/" target="_blank">Daimark Bennett</a></p>
+	<p>You may want to create an output or display image showing the results of CCA or segmentation. Analyze particles has several useful outputs:</p>
+	<img class="third" src="img-ia/seg_CCA_10a.png"/>
+	<img class="third fragment" src="img-ia/seg_CCA_10.png"/>
+	<!-- <img class="third fragment" src="img-ia/seg_CCA_10b.png"/> -->
+	<p>Count masks are very useful in combination with <code>[Image > Look Up Tables > Glasbey]</code>-style (IE random) LUTs</p>
 	</section>
-</section>
-
-</section>
 
 
 
