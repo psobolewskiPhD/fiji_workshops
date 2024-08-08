@@ -628,33 +628,46 @@
 <section data-state="apps2"><style>.apps2 header:after { content: "Tracking: Hands On"; }</style>
 <p>Open <a href="material/10-tracks.tif"><code>10-tracks.tif</code></a><br>Hit the arrow to play the movie. Right Click on the arrow to set playback speed</p>
 <img class="quart" src="img-ia/tracks_11.png"/>
-<p class="fragment">If you're interested in how the dataset was made see <a href="https://bitbucket.org/snippets/davemason/Ke9zz7" target="_blank">this snippet</a></p>
+<p class="subtle clear"><br>If you're interested in how the dataset was made see <a href="https://bitbucket.org/snippets/davemason/Ke9zz7" target="_blank">this snippet</a></p>
 </section>
 
 <section data-state="apps2"><style>.apps2 header:after { content: "Tracking: Hands On"; }</style>
 <p>Run <code>[Plugins > Tracking > Trackmate]</code></p>
-
-<img class="half left" src="img-ia/trackmate_01.png"/>
-
-<ul class="half right"><li>Trackmate guides you through tracking using the Next and Prev buttons</li><li>The first dialog lets you select a subset (in space and time) to process. This is handy on large datasets when you want to calculate parameters before processing the whole dataset</li><li>Hit Next, keep the default (LoG) detector then hit Next again to move onto Feature detection.</li></ul>
+<div class="left half">
+<img src="img-ia/trackmate_01.png"/>
+</div>
+<div class="right half">
+<ul><li>Trackmate guides you through tracking using the Next and Prev buttons</li><li>The first dialog lets you select a subset (in space and time) to process. This is handy on large datasets when you want to calculate parameters before processing the whole dataset</li><li>Hit Next, keep the default (LoG) detector then hit Next, and advance the slides!</li></ul>
+</div>
 </section>
 <section data-state="apps2"><style>.apps2 header:after { content: "Tracking: Hands On"; }</style>
-<img class="left half" src="img-ia/trackmate_02.png"/>
-<ul class="half right"><li>Enter a Blob Diameter of 2 (note the scaled units)</li><li>Hit preview. Without any threshold, all the background noise is detected as features</li><li>Add a threshold of 0.1 and hit Preview again.</li></ul>
-
-<p class="fragment clear">Generally your aim should be to provide the minimum threshold that removes all noise. Slide the navigation bar, then hit Preview to check out a few other timepoints.</p>
+<div class="left half">
+<img src="img-ia/trackmate_02.png"/>
+</div>
+<div class="right half">
+<ul ><li>Enter a Blob Diameter of 2 (note the scaled units)</li><li>Hit preview. Without any threshold, all the background noise is detected as features</li><li>Enter `0.1` for the `Quality threshold` and hit Preview again.</li></ul>
+</div>
+<p class="fragment clear">You should aim to set the minimum threshold that removes all noise.
+	<br>Slide the navigation bar, then hit Preview to check out a few other timepoints. When satisfied press Next and advance the slides!</p>
 </section>
 <section data-state="apps2"><style>.apps2 header:after { content: "Tracking: Hands On"; }</style>
-<img class="left half" src="img-ia/trackmate_04.png"/>
-<p class="half right">Hit next, accepting defaults until you reach 'Set Filters on Spots'</p>
+<div class="left half">
+<img src="img-ia/trackmate_04.png"/>
+</div>
+<p class="half right">TrackMate will process the stacks.
+	<br>Once it's done, hit next, accepting defaults until you reach 'Select a <b>tracker</b>'</p>
+	<br>Ensure `Simple LAP tracker` is selected and hit Next, then advance the slides!</p>
 </section>
 <section data-state="apps2"><style>.apps2 header:after { content: "Tracking: Hands On"; }</style>
 <img class="left half" src="img-ia/trackmate_05.png"/>
 <ul class="half right">
-<li>Hit next, accepting defaults until you reach 'Settings for Simple LAP tracker'</li>
-<li>Keep the defaults and hit Next</li>
-<li>You have tracks!</li>
+<p>In the 'Settings for Simple LAP tracker', set:</p>
+<ul>
+<li>`Linking max distance` to `5.0`</li>
+<li>`Gap-closing max distance` to `5.0`</li>
+<li>`Gap-closing max frame gap` to `0`</li>
 </ul>
+<p>Press Next and after processing, you should have tracks!</p>
 </section>
 <section data-state="apps2"><style>.apps2 header:after { content: "Tracking: Hands On"; }</style>
 <img class="left half" src="img-ia/trackmate_05.png"/>
@@ -668,12 +681,12 @@
 </section>
 
 <section data-state="apps2"><style>.apps2 header:after { content: "Tracking: Hands On"; }</style>
-<p>Common outputs from Trackmate: (1) Tracking data</p>
+<p>Press Next to get to outputs from Trackmate: (1) Tracking data</p>
 <img class="left half" src="img-ia/trackmate_06.png"/>
 <img class="right half" src="img-ia/trackmate_08.png"/>
 </section>
 <section data-state="apps2"><style>.apps2 header:after { content: "Tracking: Hands On"; }</style>
-<p>Common outputs from Trackmate: (2) Movies!</p>
+<p>Press Next to get to outputs from Trackmate: (2) Movies!</p>
 <img class="left half" src="img-ia/trackmate_07.png"/>
 <img class="right third" src="img-ia/trackmate_09.gif"/>
 <div class="clear"></div>
