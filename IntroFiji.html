@@ -445,11 +445,12 @@
 <!--BEGINNING of TASK 6 -->
 
 <section data-state="apps11"><style>.apps11 header:after { content: "Segmentation: Hands On"; }</style>
+<h2>Exercise 6</h2>
 <p>Open <code><a href="material/Task6.pdf">Task6.pdf</a></code> and follow the instructions there.</p>
 <p>You will need these images: <a href="material/07-nuclei.tif"><code>07-nuclei.tif</code></a> and <a href="material/08-nucleiMask.tif"><code>08-nucleiMask.tif</code></a></p>
 </section>
 
-<section data-state="apps13"><style>.apps13 header:after { content: "Segmentation: Making Measurements"; }</style>
+<section data-menu-title="Segmentation: measurements" data-state="apps13"><style>.apps13 header:after { content: "Segmentation: Making Measurements"; }</style>
 	<p>Analyze Particles comes with the option to <code>Display Results</code></p>
 	<img class="third left" src="img-ia/seg_CCA_6.png"/>
 	<img data-fragment-index="2" class="third left fragment" src="img-ia/seg_CCA_8.png"/>
@@ -465,7 +466,7 @@
 <p>Don't forget <code>[Analyze > Set Measurements]</code> to pick parameters</p>
 </section>
 
-<section data-state="apps14"><style>.apps14 header:after { content: "Segmentation: Visualisation"; }</style>
+<section data-menu-title="Segmentation: visualization" data-state="apps14"><style>.apps14 header:after { content: "Segmentation: Visualisation"; }</style>
 	<p>You may want to create an output or display image showing the results of CCA or segmentation. Analyze particles has several useful outputs:</p>
 	<img class="third" src="img-ia/seg_CCA_10a.png"/>
 	<img class="third fragment" src="img-ia/seg_CCA_10.png"/>
@@ -475,140 +476,9 @@
 
 
 
-<!-- ---------------------- APPLICATIONS BATCH PROCESSING -------------------------- -->
 
-
-
-<section data-menu-title="Batch Processing" data-state="apps20z"><style>.apps20z header:after { content: ""; }</style>
-<h1>Applications: Batch Processing</h1>
-<h4>Why batch process? File conversion, batch processing, scripting</h4>
-</section>
-
-
-<section data-state="apps20"><style>.apps20 header:after { content: "Batch Processing: Theory"; }</style>
-<p>Manual analysis (while sometimes necessary) can be laborious, error prone and not provide the provenance required. Batch processing allows the same processing to be run on multiple images.</p>
-
-<p>The built-in <code>[Process > Batch]</code> menu has lots of useful functions:</p>
-<img class="half" src="img-ia/batch_01.png"/>
-</section> 
-
-<section data-state="apps21"><style>.apps21 header:after { content: "Batch Processing: Data"; }</style>
-<p>We'll use a subset of dataset BBBC008 from the <a href="https://data.broadinstitute.org/bbbc/BBBC008/" target="_blank">Broad Bioimage Benchmark Collection</a></p>
-<ul><li>Download the zip file from <a href="material/BBBC008_partial.zip">here</a> to the desktop</li><li>Unzip (right click and "Extract All") to end up with a folder on your desktop called <code>BBBC008_partial</code></li></ul><br>
-<img class="" src="img-ia/batch_04.png"/>
-<ul><li>Make another folder on the desktop called <code>Output</code></li><ul>
-</section> 
-
-<!--BEGINNING of TASK 7 -->
-
-<section data-state="apps22"><style>.apps22 header:after { content: "Batch Processing: Batch Convert"; }</style>
-<p>Open <code><a href="material/Task7.pdf">Task7.pdf</a></code> and follow the instructions there.</p>
-</section> 
-
-
-
-<!--END of TASK 7 -->
-
-<!-- Scripting 101 Start-->
-
-<section data-menu-title="Scripting" data-state="apps24z"><style>.apps24z header:after { content: ""; }</style>
-<h1>Scripting</h1>
-<h4>A very brief foray into scripts</h4>
-</section>
-
-<section data-state="apps24"><style>.apps24 header:after { content: "Scripting"; }</style>
-<p>Scripting is useful for running the same process multiple times or having a record of how images were processed to get a particular output</p>
-<p>Fiji supports many scripting languages including Java, Python, Scala, Ruby, Clojure and Groovy through the script editor which also recognises the macro language from the previous example (which we'll be using)</p>
-<!-- <p class="fragment" >Run <code>[Plugins > New > Macro]</code></p></div> -->
-<img class="half fragment" src="img-ia/script01.PNG"/>
-</section>
-
-<section data-state="apps24"><style>.apps24 header:after { content: "Scripting"; }</style>
-<p>As an example, we're going to (manually) create a montage from a three channel image, then see what the script looks like</p>
-<img class="third" src="img-ia/script3.png"/>
-<ul>
-<li>Open <a href="material/06-multichannel.tif"><code>06-MultiChannel.tif</code></a></li>
-<li>Open the macro recorder: <code>[Plugins > Macros > Record]</code></li>
-</ul>
-</section>
-
-<section data-state="apps24"><style>.apps24 header:after { content: "Scripting"; }</style>
-<div class="left twothirds">
-<ul style="font-size:70%">
-<li>(If necessary <code>[Image > Hyperstacks > Stack to Hyperstack]</code>)</li>
-<li>Open the channels tool <code>[Image > Color > Channels Tool]</code> and set the mode to <code>grayscale</code></li>
-<li>Run <code>[Image > Type > RGB color]</code></li>
-<li>Rename this image to <code>channels</code> with <code>[Image > Rename]</code></li>
-<li>Select the original stack, and using the channels tool, set the mode to <code>composite</code></li>
-<li>Run <code>[Image > Type > RGB color]</code></li>
-<li>Rename this image to <code>merge</code> with <code>[Image > Rename]</code></li>
-<li>Close the original (it should be the only 8-bit image open (check the Info bar!)</li>
-<li>Run <code>[Image > Stacks > Tools > Concatenate]</code> and select Channels and merge in the two boxes (see right)</li>
-<li>Run <code>[Image > Stacks > Make Montage]</code> change the border width to 3 then hit OK</li>
-<!-- <li>Run <code>[File > Save As > PNG]</code> and save the file in the output directory</li> -->
-</ul>
-</div>
-<div class="third right">
-<img src="img-ia/script02.png">
-</div>
-<p class="clear fragment">Got it? Have a look at the Macro Recorder and see if you can see the commands you ran</p>
-</section>
-
-<section data-state="apps24"><style>.apps24 header:after { content: "Scripting"; }</style>
-<p>Open the script editor with <code>[File > New > Script]</code> and copy in the following code:</p>
-<pre><code class="java" data-trim data-noescape>
-//-- Record the filename
-imageName=getTitle();
-print("Processing: "+imageName);
-//-- Display the stack in greyscale, create an RGB version, rename
-Property.set("CompositeProjection", "null");
-Stack.setDisplayMode("grayscale");
-run("RGB Color");
-rename("channels");
-//-- Select the original image
-selectWindow(imageName);
-//-- Display the stack in composite, create an RGB version, rename
-Property.set("CompositeProjection", "Sum");
-Stack.setDisplayMode("composite");
-run("RGB Color");
-rename("merge");
-//-- Close the original
-close(imageName);
-//-- Put the two RGB images together
-run("Concatenate...", "  title=newStack open image1=channels image2=merge");
-//-- Create a montage
-run("Make Montage...", "columns=4 rows=1 scale=0.50 border=3");
-//-- Close the stack (from concatenation)
-close("newStack");
-</code></pre>
-<p>Open <a href="material/06-multichannel.tif"><code>06-MultiChannel.tif</code></a> again and hit Run</p>
-<p class="subtle fragment">Comments, variables, print, active window</p>
-</section>
-
-<section data-state="apps24"><style>.apps24 header:after { content: "Scripting"; }</style>
-<p>This script operates on an open image but it's easily converted to a batch processing script using the built in templates:</p>
-<img class="half" src="img-ia/script04.png"/>
-<p>The full script is <a href="material/Process_Folder_montage.ijm">here</a>. I added these lines at the top and bottom:</p>
-<pre><code class="java">open(input + File.separator + file);</code></pre>
-<pre><code class="java">saveAs("png", output + File.separator + replace(file, suffix, ".png"));
-close("*");
-</code></pre>
-</section>
-
-<section data-state="apps24"><style>.apps24 header:after { content: "Scripting"; }</style>
-<p>We'll go into more detail on scripts in the future</p>
-<p>In the meantime:</p>
-<ul>
-<li><a href="https://imagej.nih.gov/ij/developer/macro/macros.html" target="_blank">ImageJ language reference</a></li>
-<li><a href="https://imagej.nih.gov/ij/developer/macro/functions.html" target="_blank">ImageJ function reference</a></li>
-<li><a href="https://postacquisition.wordpress.com/2017/08/29/staying-in-version-control/" target="_blank">Getting started with Version Control for scripting</a></li>
-</ul>
-</section>
-
-<!-- Scripting 101 end -->
 
 <!-- ---------------------- APPLICATIONS COLOCALISTATION -------------------------- -->
-
 
 
 <section data-menu-title="Colocalisation Analysis" data-state="apps30z"><style>.apps30z header:after { content: ""; }</style>
@@ -621,6 +491,7 @@ close("*");
 <!-- <p>Colocalisation: the bane of Image Analysts</p> -->
 <img class="half" src="img-ia/coloc_00.png"/>
 <p class="subtle">Adapted from a slide by <a href="https://twitter.com/fab_cordelieres" target="_blank">Fabrice Cordelieres</a></p>
+<p>For more rigor, see: <a href="https://journals.biologists.com/jcs/article/131/3/jcs211847/77151/Image-co-localization-co-occurrence-versus">Aaron et al. J Cell Sci (2018) 131 (3): jcs211847.</a>, <a href="https://cob.silverchair-cdn.com/cob/content_public/journal/jcs/131/3/10.1242_jcs.211847/9/jcs21184704.jpeg?Expires=1725605004&Signature=H4oE66qH-7si8hn9JJwFT8bi0Mrfs2RYqG1yGV55sisX1XEiVd0WugBSYAYJlkWzDKSwKHUtYPebzk6cQNjho7cxHJvIv~yHcC0qnT2EgpUWbSd9tXp9pNrZ1ZFQwUau4JogoAP3RvlcXV8GkPQ4S~o8keXPVjxcGw9C18jT3MS60Z39kvehxK484Rv8gGhmDa25jqA4qYxMLOK0s-CsleZUSPXtr3G1b-5MpquJ0EX16UonVGSZESDxF-3U33tvM88ZTCKEqLjEgewScYdnlAPk8Z3n180GNw3L9A2HJJ1c1UTLIXtoFdWnkh3~CTHdUW2NfiKZ6kBwZKLQWlWgZQ__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA">Figure 4</a></p>
 </section>
 
 <section data-state="apps30"><style>.apps30 header:after { content: "Colocalisation: Theory"; }</style>
@@ -630,16 +501,18 @@ close("*");
 </section>
 
 <section data-state="apps35"><style>.apps35 header:after { content: "Bolte and Cordelieres"; }</style>
-<p>We will walk through using JaCoP (Just Another CoLocalisation Plugin) to look at Pearson's and Manders' analysis</p>
-<p>If you're doing colocalisation analysis at all, I <u>highly</u> recommend reading the companion paper <a href="https://doi.org/10.1111/j.1365-2818.2006.01706.x" target="_blank">https://doi.org/10.1111/j.1365-2818.2006.01706.x</a></p>
-
+<p>We will walk through using <a href="https://imagej.net/plugins/jacop">JaCoP (Just Another CoLocalisation Plugin)</a> to look at Pearson's and Manders' analysis<br> It's been revamped by the BIOP folks of EPFL: <a href="https://github.com/BIOP/ijp-jacop-b?tab=readme-ov-file#ijp-jacop-b">JaCoP-BIOP</a></p>
+<p>The companion paper <a href="https://doi.org/10.1111/j.1365-2818.2006.01706.x" target="_blank">https://doi.org/10.1111/j.1365-2818.2006.01706.x</a></p>
 <img class="half" src="img-ia/coloc_00a.png"/>
 </section>
 
-<section data-state="apps31"><style>.apps31 header:after { content: "Colocalisation: Pearson's Correlation Coefficient"; }</style>
-<p>Pearson's Correlation Coefficient</p>
-<img class="third left" src="img-ia/coloc_10.png"/>
-<ul class="twothirds">
+<section data-state="apps31"><style>.apps31 header:after { content: "Colocalisation: Pearson's Correlation Coefficient (PCC)"; }</style>
+<h2>Pearson's Correlation Coefficient</h2>
+<div class="third left">
+<img src="img-ia/coloc_10.png"/>
+</div>
+<div class="twothirds right">
+<ul>
 <li>For each pixel, plot the intensities of two channels in a scatter plot</li>
 <li>Ignore pixels with only one channel (IE intensity below BG)
 <li>P value describes the goodness of fit (-1 to 1)</li>
@@ -648,18 +521,24 @@ close("*");
 <li>0 = no positive or negative correlation</li>
 <li>-1 = exclusion</li>
 </ul></ul>
-<p class="subtle clear">Figure from <a href="https://doi.org/10.1111/j.1365-2818.2006.01706.x" target="_blank">https://doi.org/10.1111/j.1365-2818.2006.01706.x</a></p>
+</div>
+<p class="subtle clear"><br>Figure from <a href="https://doi.org/10.1111/j.1365-2818.2006.01706.x" target="_blank">https://doi.org/10.1111/j.1365-2818.2006.01706.x</a></p>
 </section>
 <section data-state="apps31"><style>.apps31 header:after { content: "Colocalisation: Pearson's Correlation Coefficient"; }</style>
-<img class="left third" src="img-ia/coloc_11.png"/>
-<ul class="twothirds">
-<li>Download <a href="material/jacop_.jar"><code>JaCoP</code></a></li>
-<li>Run <code>[Plugins > Install...]</code>, point to the jar file, then press "Save"</li>
+<h2>PCC Exercise</h2>
+<div class="third left">
+	<img src="img-ia/coloc_11.png"/>
+</div>
+<div class="twothirds right">
+<ul>
+<li>Download <a href="material/JACoP_B-1.2.0.jar"><code>JaCoP-BIOP plugin</code></a></li>
+<li>Run <code>[Plugins > Install...]</code>, point to the downloaded jar file, then press "Save" to confirm</li>
 <li>Restart Fiji</li>
 <li>Open <a href="material/11-colocA.tif"><code>11-colocA.tif</code></a> and <a href="material/12-colocB.tif"><code>12-colocB.tif</code></a></li>
-<li>Run <code>[Plugins > JaCoP]</code>, uncheck everything except Pearsons, select the same image for both channels</li>
+<li>Run <code>[Plugins > BIOP > Image Analysis > BIOP JaCoP]</code>, uncheck everything except Pearsons, select the same image for both channels</li>
 <li>Repeat for different combinations of these images and also <a href="material/13-colocA_half.tif"><code>13</code></a> and <a href="material/14-colocB_quarter.tif"><code>14</code></a></li>
 </ul>
+</div>
 </section>
 <section data-state="apps32"><style>.apps32 header:after { content: "Colocalisation: Problems with Pearson's"; }</style>
 <img class="left quart" src="img-ia/coloc_10.png"/>
@@ -675,7 +554,7 @@ close("*");
 
 <section data-state="apps33"><style>.apps33 header:after { content: "Colocalisation: Manders'"; }</style>
 <!-- <img class="twothirds" src="img-ia/coloc_13.png"/> -->
-<p>Manders' Overlap Coefficient</p>
+<h2>Manders' Overlap Coefficient</h2>
 <ul class="twothirds">
 <li>Removes some of the intensity dependence of Pearson's and provides channel-specific overlap coefficients (M1 &amp; M2)</li>
 <li>Values from 0 (no overlap) to 1 (complete overlap)</li>
@@ -684,13 +563,18 @@ close("*");
 </section>
 
 <section data-state="apps33"><style>.apps33 header:after { content: "Colocalisation: Manders'"; }</style>
-<img class="third" src="img-ia/coloc_11.png"/>
-<ul class="twothirds">
+<h2>Manders' Exercise</h2>
+	<div class="third left">
+<img src="img-ia/coloc_11.png"/>
+</div>
+<div class="twothirds right">
+<ul>
 <li>Use the same images from last time (<a href="material/11-colocA.tif"><code>11</code></a>, <a href="material/12-colocB.tif"><code>12</code></a>,<a href="material/13-colocA_half.tif"><code>13</code></a> and <a href="material/14-colocB_quarter.tif"><code>14</code></a>)</li>
-<li>Run <code>[Plugins > JaCoP]</code>, check both Pearsons and Manders</li>
+<li>Run <code>[Plugins > BIOP > Image Analysis > BIOP JaCoP]</code>, check both Pearsons and Manders</li>
 <li>Run for different combinations of these images</li>
 <li>Note the differences in coefficients especially in images 13 and 14</li>
 <li class="fragment">[BONUS] add some noise <code>[Process > Noise > Add Noise]</code> or blur your images <code>[Process > Filters > Gaussian Blur]</code> and see how that affects the coefficients</li></ul>
+</div>
 </section>
 
 
@@ -887,6 +771,137 @@ close("*");
 </ul>
 </section>
 
+<!-- ---------------------- APPLICATIONS BATCH PROCESSING -------------------------- -->
+
+
+
+<section data-menu-title="Batch Processing" data-state="apps20z"><style>.apps20z header:after { content: ""; }</style>
+	<h1>Applications: Batch Processing</h1>
+	<h4>Why batch process? File conversion, batch processing, scripting</h4>
+	</section>
+	
+	
+	<section data-state="apps20"><style>.apps20 header:after { content: "Batch Processing: Theory"; }</style>
+	<p>Manual analysis (while sometimes necessary) can be laborious, error prone and not provide the provenance required. Batch processing allows the same processing to be run on multiple images.</p>
+	
+	<p>The built-in <code>[Process > Batch]</code> menu has lots of useful functions:</p>
+	<img class="half" src="img-ia/batch_01.png"/>
+	</section> 
+	
+	<section data-state="apps21"><style>.apps21 header:after { content: "Batch Processing: Data"; }</style>
+	<p>We'll use a subset of dataset BBBC008 from the <a href="https://data.broadinstitute.org/bbbc/BBBC008/" target="_blank">Broad Bioimage Benchmark Collection</a></p>
+	<ul><li>Download the zip file from <a href="material/BBBC008_partial.zip">here</a> to the desktop</li><li>Unzip (right click and "Extract All") to end up with a folder on your desktop called <code>BBBC008_partial</code></li></ul><br>
+	<img class="" src="img-ia/batch_04.png"/>
+	<ul><li>Make another folder on the desktop called <code>Output</code></li><ul>
+	</section> 
+	
+	<!--BEGINNING of TASK 7 -->
+	
+	<section data-state="apps22"><style>.apps22 header:after { content: "Batch Processing: Batch Convert"; }</style>
+	<p>Open <code><a href="material/Task7.pdf">Task7.pdf</a></code> and follow the instructions there.</p>
+	</section> 
+	
+	
+	
+	<!--END of TASK 7 -->
+	
+	<!-- Scripting 101 Start-->
+	
+	<section data-menu-title="Scripting" data-state="apps24z"><style>.apps24z header:after { content: ""; }</style>
+	<h1>Scripting</h1>
+	<h4>A very brief foray into scripts</h4>
+	</section>
+	
+	<section data-state="apps24"><style>.apps24 header:after { content: "Scripting"; }</style>
+	<p>Scripting is useful for running the same process multiple times or having a record of how images were processed to get a particular output</p>
+	<p>Fiji supports many scripting languages including Java, Python, Scala, Ruby, Clojure and Groovy through the script editor which also recognises the macro language from the previous example (which we'll be using)</p>
+	<!-- <p class="fragment" >Run <code>[Plugins > New > Macro]</code></p></div> -->
+	<img class="half fragment" src="img-ia/script01.PNG"/>
+	</section>
+	
+	<section data-state="apps24"><style>.apps24 header:after { content: "Scripting"; }</style>
+	<p>As an example, we're going to (manually) create a montage from a three channel image, then see what the script looks like</p>
+	<img class="third" src="img-ia/script3.png"/>
+	<ul>
+	<li>Open <a href="material/06-multichannel.tif"><code>06-MultiChannel.tif</code></a></li>
+	<li>Open the macro recorder: <code>[Plugins > Macros > Record]</code></li>
+	</ul>
+	</section>
+	
+	<section data-state="apps24"><style>.apps24 header:after { content: "Scripting"; }</style>
+	<div class="left twothirds">
+	<ul style="font-size:70%">
+	<li>(If necessary <code>[Image > Hyperstacks > Stack to Hyperstack]</code>)</li>
+	<li>Open the channels tool <code>[Image > Color > Channels Tool]</code> and set the mode to <code>grayscale</code></li>
+	<li>Run <code>[Image > Type > RGB color]</code></li>
+	<li>Rename this image to <code>channels</code> with <code>[Image > Rename]</code></li>
+	<li>Select the original stack, and using the channels tool, set the mode to <code>composite</code></li>
+	<li>Run <code>[Image > Type > RGB color]</code></li>
+	<li>Rename this image to <code>merge</code> with <code>[Image > Rename]</code></li>
+	<li>Close the original (it should be the only 8-bit image open (check the Info bar!)</li>
+	<li>Run <code>[Image > Stacks > Tools > Concatenate]</code> and select Channels and merge in the two boxes (see right)</li>
+	<li>Run <code>[Image > Stacks > Make Montage]</code> change the border width to 3 then hit OK</li>
+	<!-- <li>Run <code>[File > Save As > PNG]</code> and save the file in the output directory</li> -->
+	</ul>
+	</div>
+	<div class="third right">
+	<img src="img-ia/script02.png">
+	</div>
+	<p class="clear fragment">Got it? Have a look at the Macro Recorder and see if you can see the commands you ran</p>
+	</section>
+	
+	<section data-state="apps24"><style>.apps24 header:after { content: "Scripting"; }</style>
+	<p>Open the script editor with <code>[File > New > Script]</code> and copy in the following code:</p>
+	<pre><code class="java" data-trim data-noescape>
+	//-- Record the filename
+	imageName=getTitle();
+	print("Processing: "+imageName);
+	//-- Display the stack in greyscale, create an RGB version, rename
+	Property.set("CompositeProjection", "null");
+	Stack.setDisplayMode("grayscale");
+	run("RGB Color");
+	rename("channels");
+	//-- Select the original image
+	selectWindow(imageName);
+	//-- Display the stack in composite, create an RGB version, rename
+	Property.set("CompositeProjection", "Sum");
+	Stack.setDisplayMode("composite");
+	run("RGB Color");
+	rename("merge");
+	//-- Close the original
+	close(imageName);
+	//-- Put the two RGB images together
+	run("Concatenate...", "  title=newStack open image1=channels image2=merge");
+	//-- Create a montage
+	run("Make Montage...", "columns=4 rows=1 scale=0.50 border=3");
+	//-- Close the stack (from concatenation)
+	close("newStack");
+	</code></pre>
+	<p>Open <a href="material/06-multichannel.tif"><code>06-MultiChannel.tif</code></a> again and hit Run</p>
+	<p class="subtle fragment">Comments, variables, print, active window</p>
+	</section>
+	
+	<section data-state="apps24"><style>.apps24 header:after { content: "Scripting"; }</style>
+	<p>This script operates on an open image but it's easily converted to a batch processing script using the built in templates:</p>
+	<img class="half" src="img-ia/script04.png"/>
+	<p>The full script is <a href="material/Process_Folder_montage.ijm">here</a>. I added these lines at the top and bottom:</p>
+	<pre><code class="java">open(input + File.separator + file);</code></pre>
+	<pre><code class="java">saveAs("png", output + File.separator + replace(file, suffix, ".png"));
+	close("*");
+	</code></pre>
+	</section>
+	
+	<section data-state="apps24"><style>.apps24 header:after { content: "Scripting"; }</style>
+	<p>We'll go into more detail on scripts in the future</p>
+	<p>In the meantime:</p>
+	<ul>
+	<li><a href="https://imagej.nih.gov/ij/developer/macro/macros.html" target="_blank">ImageJ language reference</a></li>
+	<li><a href="https://imagej.nih.gov/ij/developer/macro/functions.html" target="_blank">ImageJ function reference</a></li>
+	<li><a href="https://postacquisition.wordpress.com/2017/08/29/staying-in-version-control/" target="_blank">Getting started with Version Control for scripting</a></li>
+	</ul>
+	</section>
+	
+	<!-- Scripting 101 end -->
 
 
 
