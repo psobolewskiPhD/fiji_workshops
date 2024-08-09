@@ -526,17 +526,29 @@
 </section>
 <section data-state="apps31"><style>.apps31 header:after { content: "Colocalisation: Pearson's Correlation Coefficient"; }</style>
 <h2>PCC Exercise</h2>
-<div class="third left">
-	<img src="img-ia/coloc_11.png"/>
+<div class="half left">
+	<img src="img-ia/11-coloc-jacop.png"/>
 </div>
-<div class="twothirds right">
+<div class="half right">
 <ul>
 <li>Download <a href="material/JACoP_B-1.2.0.jar"><code>JaCoP-BIOP plugin</code></a></li>
 <li>Run <code>[Plugins > Install...]</code>, point to the downloaded jar file, then press "Save" to confirm</li>
 <li>Restart Fiji</li>
-<li>Open <a href="material/11-colocA.tif"><code>11-colocA.tif</code></a> and <a href="material/12-colocB.tif"><code>12-colocB.tif</code></a></li>
-<li>Run <code>[Plugins > BIOP > Image Analysis > BIOP JaCoP]</code>, uncheck everything except Pearsons, select the same image for both channels</li>
-<li>Repeat for different combinations of these images and also <a href="material/13-colocA_half.tif"><code>13</code></a> and <a href="material/14-colocB_quarter.tif"><code>14</code></a></li>
+</ul>
+</div>
+</section>
+<section data-state="apps31"><style>.apps31 header:after { content: "Colocalisation: Pearson's Correlation Coefficient"; }</style>
+	<div class="third left">
+		<img src="img-ia/coloc_11.png"/>
+	</div>
+	<div class="twothirds right">
+<ul>	
+<li>Open <a href="material/11-coloc-multichannel.tif"><code>11-coloc-multichannel.tif</code></a>.
+	<br>This is a multichannel version of the images to the left; use the <code>[Image > Color > Channels tool]</code> command to examine the channels</li>
+<li>Run <code>[Plugins > BIOP > Image Analysis > BIOP JaCoP]</code></li>
+<li>Uncheck everything except `Get Pearsons Correlation`.</li>
+<li>At the top, select different channels, by number, for `Channel A` and `Channel B`</li>
+<li>Repeat for different combinations of pairs of channels.</li>
 </ul>
 </div>
 </section>
@@ -569,8 +581,8 @@
 </div>
 <div class="twothirds right">
 <ul>
-<li>Use the same images from last time (<a href="material/11-colocA.tif"><code>11</code></a>, <a href="material/12-colocB.tif"><code>12</code></a>,<a href="material/13-colocA_half.tif"><code>13</code></a> and <a href="material/14-colocB_quarter.tif"><code>14</code></a>)</li>
-<li>Run <code>[Plugins > BIOP > Image Analysis > BIOP JaCoP]</code>, check both Pearsons and Manders</li>
+<li>Use the same multichannel image from last time (<a href="material/11-coloc-multichannel.tif"><code>11-coloc-multichannel.tif</code></a>)</li>
+<li>Run <code>[Plugins > BIOP > Image Analysis > BIOP JaCoP]</code>, check both `Get Pearsons Correlation` and `Get Manders coefficients`</li>
 <li>Run for different combinations of these images</li>
 <li>Note the differences in coefficients especially in images 13 and 14</li>
 <li class="fragment">[BONUS] add some noise <code>[Process > Noise > Add Noise]</code> or blur your images <code>[Process > Filters > Gaussian Blur]</code> and see how that affects the coefficients</li></ul>
