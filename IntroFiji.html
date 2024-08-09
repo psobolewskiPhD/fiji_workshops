@@ -750,18 +750,18 @@
 </section>
 
 <section data-state="apps41"><style>.apps41 header:after { content: "Image Stitching: no overlap"; }</style>
-<p>Images acquired as adjacent frames (zero overlap)</p>
+<h2>No-overlap Stitching Exercise</h2>
 <div class="left twothirds" style="font-size:80%">
 <ul>
-<li>Open <a href="material/Stitching_noOverlap.zip"><code>Stitching_noOverlap.zip</code></a>. Unzip to the desktop.</li>
+<li>Download and unzip <a href="material/Stitching_noOverlap.zip"><code>Stitching_noOverlap.zip</code></a> (make a note of the location)</li>
 <li>Run <code>[Plugins > Stitching > Grid/Collection Stitching]</code></li>
-<li>Select: Column by Column | Up &amp; Right</li>
+<li>Select: Column by Column | Up &amp; Right</li>, then press OK.
 <li>Settings:
 <ul><li>Grid Size: 2x2</li>
 <li>Tile Overlap: 0</li>
 <li>Directory: {path to your folder}</li>
-<li>File Names: replace the numbers with <code>{i}</code> zero pad with more <code>i</code> - noOverlap_{iii}.tif</li>
-<li>Uncheck all the options [OPTIONAL] Check add as ROI</li></ul>
+<li>File Names for tiles: noOverlap_{iii}.tif</li>
+<li>Uncheck all the options [OPTIONAL] Check `Add tiles as ROI`</li></ul>
 </li>
 <li>Hit OK (accept fast fusion)</li>
 </ul>
@@ -776,26 +776,27 @@
 <p class="fragment">Why do the images not line up?</p>
 </section>
 
-<section data-state="apps41"><style>.apps41 header:after { content: "Image Stitching: no overlap"; }</style>
-<p>Run <code>[Plugins > Stitching > Grid/Collection Stitching]</code> again</p>
-<p>Check the settings are as before but add "compute overlap" and hit OK</p>
-<img class="third fragment" src="img-ia/stitch_08.png"/><img class="twothirds fragment" src="img-ia/stitch_09.png"/>
-</section>
-
 <section data-state="apps42"><style>.apps42 header:after { content: "Image Stitching: 10% overlap"; }</style>
-<ul>
+<h2>Stitching with Overlap Exercise</h2>
+	<ul>
 <li>Open <a href="material/Stitching_Overlap.zip"><code>Stitching_Overlap.zip</code></a>. Unzip to the desktop.</li>
 <li>Run <code>[Plugins > Stitching > Grid/Collection Stitching]</code> again</li>
-<li>Change the directory, filename and overlap.</li>
+<li>Use the same Grid settings (they should have been restored).</li>
+<li>Set `Tile overlap` to `10%`</li>
+<li>Update the Directory to the new path "Stitching_Overlap"</li>
+<li>File Names for tiles: overlap_{iii}.tif</li>
+<li>Ensure `Compute overlap` is checkeds</li>
 <li>Hit OK</li>
 </ul>
-<img class="third fragment" src="img-ia/stitch_10.png"/>
-<div class="half right fragment">
+</section>
+<section data-state="apps42"><style>.apps42 header:after { content: "Image Stitching: 10% overlap"; }</style>
+<img class="third" src="img-ia/stitch_10.png"/>
+<div class="half right">
 <p>Two things to remember when using Grid/Collection Stitching:</p>
 <ol>
-<li>Default (R,G,B) LUTs are used after stitching (<a href="#/52"><i class="fa fa-external-link"></i></a>)</li>
-<li>All calibration information is stripped (<a href="#/19"><i class="fa fa-external-link"></i></a>)</li>
-<li>Stitching will have a harder time with sparse features or uneven illumination (<a href="https://postacquisition.wordpress.com/2015/06/17/its-a-stitch-up/" target="_blank">example here</a>)</li>
+<li>Default (R,G,B) LUTs are used after stitching</li>
+<li>All calibration information is stripped</li>
+<li>Stitching will have a harder time with sparse features or uneven illumination (<a href="https://postacquisition.wordpress.com/2015/06/17/its-a-stitch-up/" target="_blank">example in epilogue</a>)</li>
 </ol>
 </div>
 </section>
