@@ -138,6 +138,22 @@
 <p></p>
 </section>
 
+<section data-state="fiji1"><style>.fiji2 header:after { content: "Introducing ImageJ and Fiji"; }</style>
+	<div class="left twothirds">
+	<h2>A few small productivity tips</h2>
+	<ul>
+	<li>Zoom using +/- keys</li>
+	<li>When zoomed in, pan by holding space and click-dragging with mouse</li>
+	<li>Hit 'Enter' to bring the Fiji window to the front</li>
+	<li><code>[Window > Tile]</code> command is very useful when opening multiple images</li>
+	<li data-fragment-index="1" class="fragment">Info:
+	<ul><li>infobar (right top): gives info on the image</li>
+		<li>statusbar (right bottom): gives current cursor coordinates and intensity readout</li></ul>
+	</ul>
+	</div>	
+	<img data-fragment-index="1" class="fragment third" src="img-ia/fiji8.png"/>
+	</section>
+
 <section data-state="fiji1"><style>.fiji1 header:after { content: "Introducing ImageJ and Fiji"; }</style>
 	<h2>A word about updating</h2>
 	<ul>
@@ -173,6 +189,21 @@
 
 </section>
 
+<section data-state="fiji2"><style>.fiji2a header:after { content: "Fiji Basics: Calibration"; }</style>
+	<h2>Calibration</h2>
+	<div  class="half left">
+	<ul>
+	<li>The Infobar is a great way to tell if your image is calibrated</li>
+	<li>Running <code>[Image > Properties]</code> also allows you to view and set calibration</li>
+	<li>The spatial calibration can be in any unit you like but (almost) all subsequent measurements will use that unit!</li>
+	<li>For &mu;m, use <code>um</code> or <code>micron</code></li>
+	<li>Or use whatever domain specific unit, even <code>dolphins</code></li>
+	</ul>
+	</div>
+	<div class="half right">
+	<img src="img-ia/fiji9.png"/>
+	</div>
+	</section>
 
 <!--END of TASK 1 -->
 
@@ -199,7 +230,9 @@
 <img class="twothirds" src="img-ia/intensity_12.png"/>
 </section>
 <section data-state="fiji3p"><style>.fiji3p header:after { content: "Understanding Intensity Histograms"; }</style>
-<p>The Black and White points of the histogram dictate the bounds of the display (changing these values alters the brightness and contrast of the image)</p>
+<p>The Black and White points of the histogram dictate the bounds of the display (changing these values alters the brightness and contrast of the image)
+	<br>They are often called "the contrast limits"
+</p>
 <img class="twothirds" src="img-ia/intensity_13a.png"/>
 <ul><li>Brightness: horizontal position of the display window</li>
 <li>Contrast: distance between the black and white point</li></ul>
@@ -215,7 +248,9 @@
 <img class="twothirds" src="img-ia/intensity_14.png"/>
 </section>
 <section data-state="fiji3p"><style>.fiji3p header:after { content: "Understanding Intensity Histograms"; }</style>
-<p>Values falling beyond the new White point are dumped into the top bin of the histogram (IE 256 in an 8-bit image) and information from the image is lost</p>
+<p>Values falling beyond the new White point are dumped into the top bin of the histogram (IE 256 in an 8-bit image) and information from the image is lost
+	<br>This is often called "clipping"
+</p>
 <img class="twothirds" src="img-ia/intensity_15.png"/>
 </section>
 <section data-state="fiji3p"><style>.fiji3p header:after { content: "Understanding Intensity Histograms"; }</style>
@@ -248,6 +283,28 @@
 <h1>Measurements and scale bars</h1>
 <h4>Making measurements, what to measure, line vs area, adding a scale bar</h4>
 </section>
+
+<section data-state="fiji3z"><style>.fiji3 header:after { content: "Measurements"; }</style>
+	<div class="left half">
+	<li>The selection tools can be used to draw/mark regions of interest that can be measured
+	<li><code>[Analyze > Measure]</code> (or `m` keyboard shortcut) is used to make measurements</li>
+	</ul>
+	</div>
+	<div class="right half">
+	<img class="fragment" src="img-ia/fiji_meas02.png"/></div>
+	<p class="clear fragment">The measurements provided are set via <code>[Analyze > Set Measurements...]</code> except for selection-specific measurements (length, angle, coords)</p>
+	</section>
+	<section data-state="fiji3"><style>.fiji3 header:after { content: "ROI Manager"; }</style>
+	<ul>
+	<li><code>[Analyze > Tools > ROI Manager...]</code> to open the ROI Manager</li>
+	<li>After making a selection (any type), press `Add` in the ROI Manager or hit 't' or run <code>[Edit > Selection > Add to Manager]</code>
+	<li>Repeat as needed for your ROI</li>
+	<li class="fragment" data-fragment-index="1">Run <code>[More > Multi-measure]</code></li>
+	<li class="fragment" data-fragment-index="3">Use <code>[More > Save]</code> for better data provenance!</li>
+	</ul>
+	<img class="third" src="img-ia/fiji_roi1.png"/>
+	<img data-fragment-index="2" class="third fragment" src="img-ia/fiji_roi2.png"/>
+	</section>
 
 <!--BEGINNING of TASK 3 -->
 
