@@ -265,10 +265,11 @@
 <section data-state="fiji3p"><style>.fiji3p header:after { content: "Understanding Intensity Histograms"; }</style>
 <img class="left third" src="img-ia/intensity_16.png"/>
 <div class="right twothirds">
+	<p>Be careful when <b>applying</b> changes to contrast limits, as they will change the pixel values!
 <p>Be warned: removing information from an image is deemed an unacceptable maniplulation and can constitute academic fraud!</p>
 <p>For an excellent (if slightly dated) review of permissible image manipulation see:</br><a target="_blank" href="https://doi.org/10.1083/jcb.200406019">Rossner &amp; Yamada (2004): "What's in a picture? The temptation of image manipulation"</a></p>
 </div>
-<p class="clear">The best advice is to get it right during acquisition!</p>
+<p class="clear">The best advice is to get it right during acquisition and make sure you compare apples to apples</p>
 </section>
 
 
@@ -300,7 +301,7 @@
 	</ul>
 	</div>
 	<div class="right half">
-	<img class="fragment" src="img-ia/fiji_meas02.png"/></div>
+	<img src="img-ia/fiji_meas02.png"/></div>
 	<p class="clear fragment">The measurements provided are set via <code>[Analyze > Set Measurements...]</code> except for selection-specific measurements (length, angle, coords)</p>
 	</section>
 	<section data-state="fiji3"><style>.fiji3 header:after { content: "ROI Manager"; }</style>
@@ -401,7 +402,7 @@
 <p>Color in your images is (almost always) dictated by arbitrary lookup tables</p>
 <img class="third" src="img-ia/colourLUT2.png"/>
 <img data-fragment-index="1" class="third fragment" src="img-ia/colourLUT3.png"/>
-<p>Lookup tables (LUTs) translate an intensity (1-256 for 8 bit) to an RGB display value</p>
+<p>Lookup tables (LUTs), also called "colormaps" translate an intensity (1-256 for 8 bit) to an RGB display value</p>
 </section>
 <section data-state="fiji7"><style>.fiji7 header:after { content: "Colour"; }</style>
 <p>You can use whatever colours you want (they are arbitrary after all), but the most reliable contrast is greyscale</p>
