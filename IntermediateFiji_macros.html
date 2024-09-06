@@ -432,36 +432,42 @@ print(c);
                 <br/>
             </h2>
             
-                <pre><code class="java">
-// This macro demonstrates how to use the Array.* functions.
-  a1 = newArray(10, 5, 15, 2, 1.23456);
-  a2 = Array.copy(a1);
-  print("Array 2")
-  Array.print(a2);
-  a3 = Array.trim(a1, 2);
-  print("Array 3");
-  Array.print(a3);
-  Array.sort(a1);
-  print("Array 1");
-  Array.print(a1);
-  Array.getStatistics(a1, min, max, mean, std);
-  print("stats");
-  print("   min: "+min);
-  print("   max: "+max);
-  print("   mean: "+mean);
-  print("   std dev: "+std);
-  Array.fill(a1, -1);
-  Array.print(a1);
+                <pre><code data-line-numbers class="java">// This macro demonstrates how to use the Array.* functions.
+a1 = newArray(10, 5, 15, 2, 1.23456);
+a2 = Array.copy(a1);
+print("Array 2")
+Array.print(a2);
+a3 = Array.trim(a1, 2);
+print("Array 3");
+Array.print(a3);
+Array.sort(a1);
+print("Array 1");
+Array.print(a1);
+Array.getStatistics(a1, min, max, mean, std);
+print("stats");
+print("   min: "+min);
+print("   max: "+max);
+print("   mean: "+mean);
+print("   std dev: "+std);
+Array.fill(a1, -1);
+Array.print(a1);
+</code></pre>
+</section>
 
-// Arrays need not contain numbers!
-  a1 = newArray("one", "two", "three", "four");
-  print("");
-  a2 = Array.copy(a1);
-  Array.print(a1);
-  a2 = Array.trim(a1, 2);
-  Array.print(a2);
-  Array.sort(a1);
-  Array.print(a1);
+        <section data-state="bb">
+            <h2>Some array examples
+                <br/>
+            </h2>
+    
+        <pre><code data-line-numbers class="java">// Arrays need not contain numbers!
+a1 = newArray("one", "two", "three", "four");
+print("");
+a2 = Array.copy(a1);
+Array.print(a1);
+a2 = Array.trim(a1, 2);
+Array.print(a2);
+Array.sort(a1);
+Array.print(a1);
                 </code></pre>
            
             
@@ -502,7 +508,7 @@ print(c);
                 
                 </p>
                 
-                <pre><code class="C">for (start; condition; increment){
+                <pre data-cc="false"><code class="java" >for (start; condition; increment){
           do something
   }</code></pre>
             
@@ -515,15 +521,17 @@ print(c);
         
         <p>for example:
         </p>
-        <pre><code class="C">ages = newArray(18, 21, 16, 12);
+        <pre><code data-line-numbers class="java">ages = newArray(18, 21, 16, 12);
 for(i=0; i< lengthOf(ages); i++){
     print(ages[i]);
 }
-....
-18
+</code></pre>
+<p>Output:</p>
+<pre data-cc="false"><code>18
 21
 16
-12 </code></pre>
+12
+</code></pre>
         
     </section>
 
@@ -537,7 +545,7 @@ for(i=0; i< lengthOf(ages); i++){
                 </p>
                 
                 
-                <pre><code class="C">while (condition){
+                <pre data-cc="false"><code class="java">while (condition){
     do something;
 }
    </code></pre>
