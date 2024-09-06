@@ -728,6 +728,7 @@ print(result)
 <script src="plugin/highlight/highlight.js"></script>
 <script src="plugin/zoom/zoom.js"></script>
 <script src="plugin/markdown/markdown.js"></script>
+<script src="plugin/copycode/copycode.js"></script>
 
 <script>
 // More info about config & dependencies:
@@ -740,11 +741,18 @@ Reveal.initialize({
 	hashOneBasedIndex: true,
 	hash: true,
 	respondToHashChanges: true,
-	plugins: [ RevealZoom, RevealHighlight, RevealMarkdown, RevealMenu ],
+	plugins: [ RevealZoom, RevealHighlight, RevealMarkdown, RevealMenu, CopyCode ],
 	menu: {
 		hideMissingTitles: true,
 		openSlideNumber: true,
-	}
+	},
+    copycode: {
+        display: "icons",
+        style: {
+            copybg: "white",
+        }
+    }
+
 });
 </script>
 </body>
