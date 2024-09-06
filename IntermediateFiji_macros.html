@@ -24,7 +24,7 @@
 <div class="slides">
 
 <section data-menu-title="Title">
-<h2>Intermediate Fiji: Macros and Programming</h2>
+<h2>Intermediate Fiji: Macros and Scripting</h2>
 <h4>Peter Sobolewski (he/him)<br>Systems Analyst, Imaging Applications - Research IT</h4>
 <p class="subtle">Use <i class="fa fa-arrow-right"></i> to advance the slide</p>
 </section>
@@ -49,7 +49,7 @@
         
    
     <ul>
-        <li>Building blocks</li>
+        <li>Programming building blocks</li>
         <li>Putting the pieces together</li>
         <li>Writing complete structures</li></ul>
     
@@ -70,7 +70,7 @@
     </section>
     
 
-    <section data-state="python">
+    <section data-state="intro0">
         <h2>Getting help</h2>
        
         <ul>
@@ -82,6 +82,85 @@
     
                 
     </section>
+
+    <section data-state="intro0">
+        <h2>Why macros?</h2>
+       
+         <ul>
+             <li>Automation: do the same thing many times over</li>
+             <li>Reproducibility: do exactly the same thing every time, show the world what you've done</li>
+             <li>Sharing: let someone else do exactly the same analysis as you</li>
+             <li>Extension: do things Fiji cannot do by default</li>
+         </ul>  
+       
+                
+    </section>
+
+    <!-- ---------------------- APPLICATIONS BATCH PROCESSING -------------------------- -->
+
+
+
+    <section id="Batch" data-menu-title="Batch Processing" data-state="apps20z"><style>.apps20z header:after { content: ""; }</style>
+	<h1>Batch Processing</h1>
+	<h4>Why batch process? File conversion, batch processing, scripting</h4>
+	</section>
+	
+	
+	<section data-state="apps20"><style>.apps20 header:after { content: "Batch Processing: Theory"; }</style>
+	<p>Manual analysis (while sometimes necessary) can be laborious, error prone and not provide the provenance required. Batch processing allows the same processing to be run on multiple images.</p>
+	
+	<p>The built-in <code>[Process > Batch]</code> menu has lots of useful functions:</p>
+	<img class="half" src="img-ia/batch_01.png"/>
+	</section> 
+
+	<section data-menu-title="Macro Recorder" data-state="apps22"><style>.apps22 header:after { content: "Batch Processing: Macro Recorder"; }</style>
+		The Macro Recorder <code>[Plugins > Macros > Record...]</code>can enable you to generate simple macros without having to write them yourself.
+		<ul>
+			<li>With the Recorder open, (almost) every action you take in Fiji will be recorded as a macro command--this includes many Plugin functions!</li>
+		<li>The recorded Macros can be saved ("Create" button and Save) and then re-run <code>[Plugins > Macros > Run...]</code></li>
+		</ul>
+		<img src="img-ia/macro_recorder.png"/>
+		</section>
+	
+	<!--BEGINNING of TASK 8 -->
+	
+	<section data-state="apps22"><style>.apps22 header:after { content: "Batch Processing: Macro Recorder"; }</style>
+		<h2>Exercise: Macro Recorder</h2>
+		<ul><li>Ensure you have the the zip file <a href="material/BBBC008_partial.zip"><code>BBBC008_partial.zip</code></a> extracted to a known location and a that you have a second folder called "Output" next to it.
+		<li>Open <code><a href="material/Task1_MacroRec.pdf">Task1_MacroRec.pdf</a></code> and follow the instructions there.</li></ul>
+		</section> 
+		
+		<!--END of TASK 8 -->
+
+        <section data-menu-title="Fiji Script Editor" data-state="apps23"><style>.apps23 header:after { content: "Fiji Script Editor"; }</style>
+            <p>The Script Editor <code>[File > New > Script...]</code> (or keyboard shortcut <code>[</code>) can can be used to edit, write, and run macros & scripts.</p>
+            <img src="img-ia/script_editor.png"/>
+            </section>
+
+        <section data-state="apps23"><style>.apps23 header:after { content: "Fiji Script Editor"; }</style>
+            <p>The Script Editor has a number of nice features:
+                <ul>
+                    <li>Support for multiple scripting languages, including ImageJ macro</li>
+                    <li>Code hints and completions</li>
+                    <li><code>Run</code> button to easily test macros</li>
+                    <li>Templates to help get you started</li>
+                    <li>Help menu with resources</li>
+                </ul>
+                <p>Handy shortcuts:</p>
+                <ul>
+                    <li>Command/Control-R: Run the whole macro</li>
+                    <li>Shift-Command/Control-R: Run selected lines</li>
+                </ul>
+            </section>
+
+        <section data-menu-title="ImageJ Macro Language" data-state="apps24"><style>.apps24 header:after { content: "ImageJ Macro Language"; }</style>
+            <p>We will be using the ImageJ Macro language. It's the native programming language to ImageJ and is used by the Macro Recorder, making it an ideal starting point.</p>
+                <ul>
+                    <li><a href="https://imagej.net/ij/developer/macro/macros.html">ImageJ Macro Language documentation</a></li>
+                </ul>
+                <img src="img-ia/macro_recorder_create.png"/>
+            <p>Note: If you want to explore other languages on your own, the <a href="https://imagej.net/scripting/">ImageJ Scripting Guide</a> can be a good place to start.</p>
+            </section>  
 
 
     <section data-menu-title="Building Blocks" data-state="bb">
@@ -95,7 +174,7 @@
     </section>
 
 
-    <section data-state="bb">
+    <section data-state="bb1z">
         <h2>VARIABLES</h2>
         
             <img src="img-py/var-name-red.png"/>
@@ -107,26 +186,13 @@
     </section>
 
 
-    <section data-state="bb">
-        <h2>VARIABLES</h2>
+    <section data-state="bb1"><style>.bb1 header:after { content: "VARIABLES"; }</style>
         
         <img src="img-py/vars-nametags.png"/>
        
     </section>
 
-
-    <section data-state="bb">
-        <h2>Assigning variables in Fiji</h2>
-        
-            <pre><code>name = "Erick";
-height = 1.73; 
-state = "CT";</code></pre>
-        
-    </section>
-
-
-   
-        <section data-state="bb">
+        <section data-state="bb1">
             <h2>Types of variables</h2>
             
                 <p>Variables can store values of different <b><i>types</i></b>:</p>
@@ -155,12 +221,20 @@ state = "CT";</code></pre>
                 
                 <pre><code>true, false</code></pre>
 
+                <p class="fragment">Note: ImageJ Macro Language variables are dynamically typed—you don't need to declare the type.</p>
                 
         </section>
         
-   
+        <section data-state="bb1">
+        <h2>Assigning variables in ImageJ Macro</h2>
+        
+            <pre><code>name = "Erick";
+height = 1.73; 
+state = "CT";</code></pre>
+        
+    </section>
 
-    <section data-state="bb">
+    <section data-state="bb1">
             <h2>Changing types</h2>
             <p>'Casting' a variable to another type requires some of the <a href="https://imagej.net/ij/developer/macro/functions.html" target="_blank">built-in functions</a> we have mentioned.</p>
             <p>
@@ -176,7 +250,7 @@ print(c);
         </section>
 
 
-    <section data-state="bb">
+    <section data-state="bb1">
         <h2>Exercise
             
         </h2>
@@ -186,7 +260,7 @@ print(c);
 
 
     
-    <section data-state="bb">
+    <section data-state="bb1">
         <h2>Operators</h2>
         
             <p>
@@ -272,18 +346,7 @@ print(c);
     </section>
 
 
-    <section data-state="bb">
-        
-        <h2>
-            
-                &nbsp;Questions?&nbsp;
-            
-        </h2>
-        
-    </section>
-
-
-    <section data-state="bb">
+    <section data-state="bb1">
         <h2>Exercise</h2>
         
             <p>
@@ -316,7 +379,7 @@ print(c);
     </section>
 
 
-    <section data-state="bb">
+    <section data-state="bb2z">
         
         
         <h2>
@@ -327,7 +390,7 @@ print(c);
     </section>
 
 
-    <section data-state="bb">
+    <section data-state="bb2"><style>.bb2 header:after { content: "Collections"; }</style>
         <h2>Collections of Values</h2>
         
         Values can also be stored in a 
@@ -371,14 +434,16 @@ print(c);
             
                 <pre><code class="java">
 // This macro demonstrates how to use the Array.* functions.
-
   a1 = newArray(10, 5, 15, 2, 1.23456);
   a2 = Array.copy(a1);
-  list("copy", a2);
-  a2 = Array.trim(a1, 2);
-  list("trim", a2);
+  print("Array 2")
+  Array.print(a2);
+  a3 = Array.trim(a1, 2);
+  print("Array 3");
+  Array.print(a3);
   Array.sort(a1);
-  list("sort", a1);
+  print("Array 1");
+  Array.print(a1);
   Array.getStatistics(a1, min, max, mean, std);
   print("stats");
   print("   min: "+min);
@@ -386,38 +451,21 @@ print(c);
   print("   mean: "+mean);
   print("   std dev: "+std);
   Array.fill(a1, -1);
-  list("fill", a1);
+  Array.print(a1);
 
+// Arrays need not contain numbers!
   a1 = newArray("one", "two", "three", "four");
   print("");
   a2 = Array.copy(a1);
-  list("copy", a2);
+  Array.print(a1);
   a2 = Array.trim(a1, 2);
-  list("trim", a2);
+  Array.print(a2);
   Array.sort(a1);
-  list("sort", a1);
-
-  function list(name, a) {
-      print(name);
-      for (i=0; i< a.length; i++)
-          print("   "+a[i]);
-  }
+  Array.print(a1);
                 </code></pre>
            
             
         </section>
-
-
-    
-    <section data-state="bb">
-        
-        <h2>
-            
-                Questions?
-            
-        </h2>
-        
-    </section>
 
 
     <section data-menu-title="Putting the pieces together" data-state="pp">
