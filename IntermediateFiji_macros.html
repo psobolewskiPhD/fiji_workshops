@@ -130,13 +130,14 @@
 		
 		<!--END of TASK 8 -->
 
-        <section data-menu-title="Fiji Script Editor" data-state="apps23"><style>.apps23 header:after { content: "Fiji Script Editor"; }</style>
-            <p>The Script Editor <code>[File > New > Script...]</code> (or keyboard shortcut <code>[</code>) can can be used to edit, write, and run macros & scripts.</p>
+        <section data-state="apps23z">
+            <h2>The Script Editor</h2> 
+            <p></p><code>[File > New > Script...]</code> (or keyboard shortcut <code>[</code>)</p>
             <img src="img-ia/script_editor.png"/>
             </section>
 
         <section data-state="apps23"><style>.apps23 header:after { content: "Fiji Script Editor"; }</style>
-            <p>The Script Editor has a number of nice features:
+            <p>The Script Editor can can be used to edit, write, and run macros & scripts. It has a number of nice features:
                 <ul>
                     <li>Support for multiple scripting languages, including ImageJ macro</li>
                     <li>Code hints and completions</li>
@@ -158,7 +159,8 @@
                 </ul>
             </section>
 
-        <section data-menu-title="ImageJ Macro Language" data-state="apps24"><style>.apps24 header:after { content: "ImageJ Macro Language"; }</style>
+        <section data-state="apps24">
+            <h2>ImageJ Macro Language</h2>
             <p>We will be using the ImageJ Macro language. It's the native programming language to ImageJ, is used by the Macro Recorder, and it's fairly simple—an ideal starting point.</p>
                 <ul>
                     <li><a href"https://imagej.net/scripting/macro">Why macros?</a>—A handy overview</li>
@@ -181,7 +183,7 @@
 
 
     <section data-state="bb1z">
-        <h2>VARIABLES</h2>
+        <h1>Variables</h1>
         
             <img src="img-py/var-name-red.png"/>
         <br/>
@@ -192,7 +194,7 @@
     </section>
 
 
-    <section data-state="bb1"><style>.bb1 header:after { content: "VARIABLES"; }</style>
+    <section data-state="bb1"><style>.bb1 header:after { content: "Variables"; }</style>
         
         <img src="img-py/vars-nametags.png"/>
        
@@ -270,7 +272,7 @@ print(c);
 
 
     
-    <section data-state="bb1">
+    <section data-state="bb12z">
         <h2>Operators</h2>
         
             <p>
@@ -355,7 +357,7 @@ print(c);
        
     </section>
 
-    <section data-state="bb1">
+    <section data-state="bb12"><style>.bb12 header:after { content: "Operators"; }</style>
         <p>A few more handy operators:</p>
             <table width="100%" cellspacing="10" cellpadding="5" border="0">
                 <tbody>
@@ -393,8 +395,8 @@ print(c);
             </table>
         </section>
 
-        <section data-state="bb1">
-            <h2>String manipulation</h2>
+        <section data-state="bb12"><style>.bb12 header:after { content: "Operators"; }</style>
+                <h2>String manipulation</h2>
                 <table width="100%" cellspacing="10" cellpadding="5" border="0">
                     <tbody>
                         <tr></tr>
@@ -452,7 +454,7 @@ print(c);
                 
         </section>
 
-    <section data-state="bb1">
+        <section data-state="bb12"><style>.bb12 header:after { content: "Operators"; }</style>
         <h2>Exercise: Operators (strings)</h2>
         
             <p>
@@ -515,7 +517,7 @@ print(c);
 
 
     
-        <section data-state="bb">
+    <section data-state="bb2"><style>.bb2 header:after { content: "Collections"; }</style>
             <h2>Arrays</h2>
             
                 <p>
@@ -533,7 +535,7 @@ print(m[6]);
         </section>
 
 
-        <section data-state="bb">
+        <section data-state="bb2"><style>.bb2 header:after { content: "Collections"; }</style>
             <h2>Some array examples
                 <br/>
             </h2>
@@ -560,7 +562,7 @@ Array.print(a1);
 </code></pre>
 </section>
 
-        <section data-state="bb">
+<section data-state="bb2"><style>.bb2 header:after { content: "Collections"; }</style>
             <h2>Some more array examples
                 <br/>
             </h2>
@@ -603,7 +605,7 @@ Array.print(a1);
 
 
     
-    <section data-menu-title="For Loops" data-state="pp1"><style>.pp1 header:after { content: "For Loops"; }</style>
+    <section data-menu-title="For Loops" data-state="pp1"><style>.pp1 header:after { content: "Loops: For Loops"; }</style>
             <h2>For Loops</h2>
             
                 <p>
@@ -623,7 +625,7 @@ Array.print(a1);
         </section>
 
 
-        <section data-state="pp1"><style>.pp1 header:after { content: "For Loops"; }</style>        
+        <section data-state="pp1"><style>.pp1 header:after { content: "Loops: For Loops"; }</style>        
         <p>An example of using a <code>for</code> loop:
         </p>
         <pre><code data-line-numbers="0|1|2|3-4" class="javascript">ages = newArray(18, 21, 16, 12);
@@ -641,7 +643,7 @@ for(i=0; i< lengthOf(ages); i++){
     </section>
 
 
-    <section data-menu-title="While Loops" data-state="pp2"><style>.pp2 header:after { content: "While Loops"; }</style>
+    <section data-menu-title="While Loops" data-state="pp2"><style>.pp2 header:after { content: "Loops: While Loops"; }</style>
 
             <h2>While Loops</h2>
             
@@ -660,7 +662,7 @@ for(i=0; i< lengthOf(ages); i++){
         </section>
 
 
-        <section data-state="pp2"><style>.pp2 header:after { content: "While Loops"; }</style>
+        <section data-state="pp2"><style>.pp2 header:after { content: "Loops: While Loops"; }</style>
         <p>An example of a <code>while</code> loop:
            
         </p>
@@ -775,18 +777,7 @@ print(result);
     </section>
 
 
-     <section data-state="pp">
-        
-        <h2>
-            
-                Questions?
-            
-        </h2>
-        
-    </section>
-
-
-    <section data-state="bb">
+    <section data-state="pp4"><style>.pp4 header:after { content: "Functions"; }</style> 
         <h2>Exercise: Functions</h2>
         
             <p>
@@ -833,62 +824,62 @@ print(result);
             <tbody>
                 <tr>
                     <td>
-                        <font style="font-size: 30px;" color="#e06666">
+                        <font style="font-size: 25px;" color="#e06666">
                             <code>open(path)</code>
                         </font>
                     </td>
                     <td>
-                        <font style="font-size: 30px;">Open and display the image located at <code>path</code>. Note the <code>path</code> should be provided as a string (in quotes).</font>
+                        <font style="font-size: 25px;">Open and display the image located at <code>path</code>. Note the <code>path</code> should be provided as a string (in quotes).</font>
                     </td>
                 </tr>
                 <tr></tr>
                     <td>
-                        <font style="font-size: 30px;" color="#e06666">
+                        <font style="font-size: 25px;" color="#e06666">
                             <code>getTitle()</code>
                         </font>
                     </td>
                     <td>
-                        <font style="font-size: 30px;">Returns the title of the current image.</font>
+                        <font style="font-size: 25px;">Returns the title of the current image.</font>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <font style="font-size: 30px;" color="#e06666">
+                        <font style="font-size: 25px;" color="#e06666">
                             <code>close(title)</code>
                         </font>
                     </td>
                     <td>
-                        <font style="font-size: 30px;">Close window with a given <code>title</code>. Note that the string <code>title</code> can contain wild cards.</font>
+                        <font style="font-size: 25px;">Close window with a given <code>title</code>. Note that the string <code>title</code> can contain wild cards.</font>
                     </td>
                 </tr>
                 <tr></tr>
                     <td>
-                        <font style="font-size: 30px;" color="#e06666">
+                        <font style="font-size: 25px;" color="#e06666">
                             <code>getFileList(path)</code>
                         </font>
                     </td>
                     <td>
-                        <font style="font-size: 30px;">List the contents of the directory located at <code>path</code></font>
+                        <font style="font-size: 25px;">List the contents of the directory located at <code>path</code></font>
                     </td>
                 </tr>
                 <tr></tr>
                     <td>
-                        <font style="font-size: 30px;" color="#e06666">
+                        <font style="font-size: 25px;" color="#e06666">
                             <code>File.separator</code>
                         </font>
                     </td>
                     <td>
-                        <font style="font-size: 30px;">Returns the platform specific path file separator (e.g. / or \) as a string</font>
+                        <font style="font-size: 25px;">Returns the platform specific path file separator (e.g. / or \) as a string</font>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <font style="font-size: 30px;" color="#e06666">
+                        <font style="font-size: 25px;" color="#e06666">
                             <code>getImageID()</code>
                         </font>
                     </td>
                     <td>
-                        <font style="font-size: 30px;">Returns the unique ID of an image. Use with <code>selectImage(id)</code>, <code>isOpen(id)</code>, and <code>isActive(id)</code>.</font>
+                        <font style="font-size: 25px;">Returns the unique ID of an image. Use with <code>selectImage(id)</code>, <code>isOpen(id)</code>, and <code>isActive(id)</code>.</font>
                     </td>
                 </tr>
             </tbody>
