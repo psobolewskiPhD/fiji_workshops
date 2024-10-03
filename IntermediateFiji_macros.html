@@ -410,7 +410,7 @@ print(c);
                         <tr>
                             <td>
                                 <font style="font-size: 30px;" color="#e06666">
-                                    <b>replace(string, old, new)</b>
+                                    <code>replace(string, old, new)</code>
                                 </font>
                             </td>
                             <td>
@@ -420,7 +420,7 @@ print(c);
                         <tr>
                             <td>
                                 <font style="font-size: 30px;" color="#e06666">
-                                    <b>split(string, delimiter)</b>
+                                    <code>split(string, delimiter)</code>
                                 </font>
                             </td>
                             <td>
@@ -429,12 +429,22 @@ print(c);
                         </tr>
                         <tr>
                             <td>
-                                <font style="font-size: 25px;" color="#e06666">
-                                    <b>lengthOf(string)</b>
+                                <font style="font-size: 30px;" color="#e06666">
+                                    <code>lengthOf(string)</code>
                                 </font>
                             </td>
                             <td>
                                 <font style="font-size: 30px;">Return the length of <code>string</code></font>
+                            </td>
+                        </tr>
+                        <tr></tr>
+                            <td>
+                                <font style="font-size: 30px;" color="#e06666">
+                                    <code>endsWith(string, suffix)</code>
+                                </font>
+                            </td>
+                            <td>
+                                <font style="font-size: 30px;">Return true (1) if <code>string</code> ends with <code>suffix</code></font>
                             </td>
                         </tr>
                     </tbody>
@@ -777,7 +787,7 @@ print(result);
 
 
     <section data-state="bb">
-        <h2>Exercise</h2>
+        <h2>Exercise: Functions</h2>
         
             <p>
                 Create a 
@@ -810,6 +820,97 @@ print(result);
     </section>
     
 
+    <section id="Image File Handling" data-menu-title="Image File Handling" data-state="ims1"><style>.ims1 header:after { content: ""; }</style>
+        <h1>Image File Handling</h1>
+        <h4>Some handy built-ins for handling image files</h4>
+        </section>
+        
+        
+        <section data-state="ims1"><style>.ims1 header:after { content: "Image File Handling"; }</style>
+        <p>The macro language provides some built-ins for handling image files.</p>
+        
+        <table width="100%" cellspacing="10" cellpadding="5" border="0">
+            <tbody>
+                <tr>
+                    <td>
+                        <font style="font-size: 30px;" color="#e06666">
+                            <code>open(path)</code>
+                        </font>
+                    </td>
+                    <td>
+                        <font style="font-size: 30px;">Open and display the image located at <code>path</code>. Note the <code>path</code> should be provided as a string (in quotes).</font>
+                    </td>
+                </tr>
+                <tr></tr>
+                    <td>
+                        <font style="font-size: 30px;" color="#e06666">
+                            <code>getTitle()</code>
+                        </font>
+                    </td>
+                    <td>
+                        <font style="font-size: 30px;">Returns the title of the current image.</font>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <font style="font-size: 30px;" color="#e06666">
+                            <code>close(title)</code>
+                        </font>
+                    </td>
+                    <td>
+                        <font style="font-size: 30px;">Close window with a given <code>title</code>. Note that the string <code>title</code> can contain wild cards.</font>
+                    </td>
+                </tr>
+                <tr></tr>
+                    <td>
+                        <font style="font-size: 30px;" color="#e06666">
+                            <code>getFileList(path)</code>
+                        </font>
+                    </td>
+                    <td>
+                        <font style="font-size: 30px;">List the contents of the directory located at <code>path</code></font>
+                    </td>
+                </tr>
+                <tr></tr>
+                    <td>
+                        <font style="font-size: 30px;" color="#e06666">
+                            <code>File.separator</code>
+                        </font>
+                    </td>
+                    <td>
+                        <font style="font-size: 30px;">Returns the platform specific path file separator (e.g. / or \) as a string</font>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <font style="font-size: 30px;" color="#e06666">
+                            <code>getImageID()</code>
+                        </font>
+                    </td>
+                    <td>
+                        <font style="font-size: 30px;">Returns the unique ID of an image. Use with <code>selectImage(id)</code>, <code>isOpen(id)</code>, and <code>isActive(id)</code>.</font>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        </section> 
+        <section data-state="ims1"><style>.ims1 header:after { content: "Starting to put it together"; }</style>
+            <h2>Exercise: Count Objects</h2>
+            <p>Let's run a simple threshold and object counting workflow on a folder of files and get a summary table. How would we do this?</p>
+            <ul>
+                <li>Figure out the workflow on a single image: 
+                    <ul>
+                        <li>Threshold -- pick one, e.g. Otsu</li>
+                        <li>Analyze Particles -- what do we want as the "result" per image?</li>
+                    </ul>
+                <li>Use the Macro Recorder to get the workflow steps</li>
+                <li>Loop over all the files in a folder and run the workflow commands</li>
+            </ul>
+		    <ul><li>If you havn't, download this zip file <a href="material/BBBC008_partial.zip"><code>BBBC008_partial.zip</code></a> and extract to a known location. 
+		<li>Open <code><a href="material/Task2_CountMacro.pdf">Task1_CountMacro.pdf</a></code> in a new tab and follow the instructions there.</li></ul>
+		</section> 
+
+        </section>
 
     </div>
 
