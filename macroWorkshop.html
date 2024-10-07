@@ -18,36 +18,23 @@
 <header style="position: absolute;top: 1em; left: 1em; z-index:10;"></header>
 <div class="slides">
     <section data-menu-title="Title">
-<h2>Assembling a ImageJ macro</h2>
-	    <h4>Erick Martins Ratamero (he/him)</h4>
-	    
-</section>
-
-
-<section data-menu-title="Intro" class="future" style="top: 224px; display: block;" hidden="" aria-hidden="true">
-        <h2>
-            <b>Acknowledgements</b>
-        </h2>
-        
-   
-    <ul>
-        <li>Some material from <a href="https://imagej.net/Introduction_into_Macro_Programming">https://imagej.net/Introduction_into_Macro_Programming</a></li>
+		<h2>Assembling a proper ImageJ macro</h2>
+		<h4>Peter Sobolewski (he/him)<br>Systems Analyst, Imaging Applications - Research IT</h4>
+		<p class="subtle">Use <i class="fa fa-arrow-right"></i> to advance the slide</p>
+		</section>
+		
+		
+		<section data-state="intro0">
+				<h2>
+					<b>Acknowledgements</b>
+				</h2>
+				
+		   
+			<ul>
+				<li>Erick Ratamero (JAX), who prepared the original of <i>these</i> materials</li>
+        <li>Material from <a href="https://imagej.net/Introduction_into_Macro_Programming">https://imagej.net/Introduction_into_Macro_Programming</a></li>
         </ul>
     
-    </section>
-
-
-    <section data-state="python" class="future" style="top: 194px; display: block;" hidden="" aria-hidden="true">
-        <h2>Why macros?</h2>
-       
-         <ul>
-             <li>Automation: do the same thing many times over</li>
-             <li>Reproducibility: do exactly the same thing every time, show the world what you've done</li>
-             <li>Sharing: let someone else do exactly the same analysis as you</li>
-             <li>Extension: do things Fiji cannot do by default</li>
-         </ul>  
-       
-                
     </section>
 
     <section data-menu-title="Objective" class="future" style="top: 149.5px; display: none;" hidden="" aria-hidden="true">
@@ -379,31 +366,35 @@ saveAs(<span class="hljs-string">"Results"</span>, output+<span class="hljs-keyw
 </div>
 
 <script src="dist/reveal.js"></script>
+<script src="plugin/menu/menu.js"></script>
+<script src="plugin/highlight/highlight.js"></script>
+<script src="plugin/zoom/zoom.js"></script>
+<script src="plugin/markdown/markdown.js"></script>
+<script src="plugin/copycode/copycode.js"></script>
 
 <script>
 // More info about config & dependencies:
 // - https://github.com/hakimel/reveal.js#configuration
 // - https://github.com/hakimel/reveal.js#dependencies
 Reveal.initialize({
-    controls: false,
+    controls: true,
+	controlsLayout: 'edges',
 	slideNumber: true, //-- Added for development
-dependencies: [
-{ src: 'plugin/markdown/marked.js' },
-{ src: 'plugin/markdown/markdown.js' },
-{ src: 'plugin/notes/notes.js', async: true },
-{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-{ src: 'plugin/menu/menu.js' }
-],
-menu: {
-hideMissingTitles: true,
-themes: false,
-transitions: false,
-//markers: true,
-numbers: true,
-openButton: false,
-titleSelector: 'span.menu-title'
+	hashOneBasedIndex: true,
+	hash: true,
+	respondToHashChanges: true,
+	plugins: [ RevealZoom, RevealHighlight, RevealMarkdown, RevealMenu, CopyCode ],
+	menu: {
+		hideMissingTitles: true,
+		openSlideNumber: true,
+	},
+    copycode: {
+        display: "icons",
+        style: {
+            copybg: "white",
+        }
+    }
 
-}
 });
 </script>
 </body>
