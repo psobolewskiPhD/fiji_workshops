@@ -40,7 +40,7 @@
     <section data-menu-title="Objective" class="future" style="top: 149.5px; display: none;" hidden="" aria-hidden="true">
         <h2>"My first proper macro"</h2>
         <h3>Objective: apply a simple analysis pipeline over a set of images</h3>
-       
+        <p>Let's consider re-usability and generalization</p>
          <ul>
              <li>Download our <a href="./material/data_session6.zip">test data</a> to your desktop.</li>
              <li>Unzip (right click and "Extract All")</li>
@@ -348,7 +348,21 @@ saveAs("Results", output+File.separator+"MeanIntensity.csv");
 </code></pre>
 </section>
     
+<section data-state="ims2" data-menu-title="Running/Installing macros"><style>.ims2 header:after { content: ""; }</style>
+	<h3>Running & Installing macros</h3>
+	<ul>
+		<li>Drag-n-drop the <code>.ijm</code> macro file onto the Fiji bar <b>OR</b> use <code>[Plugins &gt; Macros &gt; Edit...]</code>
+			<br/>Both will launch the Script Editor so you can use <code>run</code>
+			<br/>Note: <code>[Plugins &gt; Macros &gt; Run...]</code> won't work for macros with Script Parameters</li>
+		<li>Use <code>[Plugins &gt; Install...]</code> to install a macro into the Plugins menu (bottom section)
+			<br/>This will <i>copy the macro</i> to the <code>plugins</code> folder inside your Fiji installation
+			</li>
+		<li>Make a folder in <code>Fiji/plugins</code>, e.g. <code>"ZZ My Macros"</code> to collect your macros and have easy access</li>
+		<li>Copy your macro file to <code>Fiji/plugins/Macros</code> (or make a folder there) to make it appear at bottom of [Plugins &gt; Macros]</li>	
+	</ul>
+	<p>Note: For the menus, the file name <b>must</b> have an <code>_</code> e.g. <code>Process_Folder.ijm</code> or <code>_MyMacro.ijm</code>
 
+</section> 
 
 
 </div>
