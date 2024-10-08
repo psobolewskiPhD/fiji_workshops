@@ -104,7 +104,7 @@ function processFile(input, output, file) {
          <ul>
              <li>Use each macro as the basis for the next one.</li>
              <li>Remember the macro recorder!</li>
-			 <li>The list of <a href="https://imagej.nih.gov/ij/developer/macro/functions.html">all built-in functions</a> is EXTREMELY useful!</li>
+			 <li>The list of <a href="https://imagej.net/ij/developer/macro/functions.html">all built-in functions</a> is EXTREMELY useful!</li>
 			 <li>You can refer to the slide deck: <a href="https://thejacksonlaboratory.github.io/fiji_workshops/IntermediateFiji_macros.html" target="_blank">https://thejacksonlaboratory.github.io/
                 fiji_workshops/IntermediateFiji_macros.html</a></li>
          </ul>
@@ -203,7 +203,7 @@ function processFile(input, output, file) {
 <section data-menu-title="Solution 2" class="future" style="top: 97px; display: none;" hidden="" aria-hidden="true">
     <h2>Solution 2:</h2>
 
-<pre><code data-line-numbers="20-22" class="javascript">#@ File (label = "Input directory", style = "directory") input
+<pre><code data-line-numbers="20-26" class="javascript">#@ File (label = "Input directory", style = "directory") input
 #@ File (label = "Output directory", style = "directory") output
 #@ String (label = "File suffix", value = ".tif") suffix
 
@@ -222,7 +222,7 @@ function processFolder(input) {
 }
 
 function processFile(input, output, file) {	
-	open(input+"/"+file);
+	open(input+ File.separator +file);
 	print(nSlices);
 	run("Duplicate...", " ");
 	saveAs("Tiff", output+File.separator+File.nameWithoutExtension+"_slice1.tiff");
@@ -256,7 +256,7 @@ function processFolder(input) {
 }
 
 function processFile(input, output, file) {	
-	open(input+"/"+file);
+	open(input+ File.separator +file);
 	print(nSlices);
 	setSlice(5);
 	run("Duplicate...", " ");
