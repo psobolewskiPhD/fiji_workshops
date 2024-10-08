@@ -290,7 +290,7 @@ function processFolder(input) {
 }
 
 function processFile(input, output, file) {	
-	open(input+"/"+file);
+	open(input+ File.separator +file);
 	print(nSlices);
 	for (i=1; i<=nSlices; i++){
 		setSlice(i);
@@ -326,7 +326,7 @@ function processFolder(input) {
 }
 
 function processFile(input, output, file) {	
-	open(input+"/"+file);
+	open(input+ File.separator +file);
 	print(nSlices);
 	for (i=1; i<=nSlices; i++){
 		setSlice(i);
