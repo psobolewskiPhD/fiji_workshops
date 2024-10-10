@@ -225,7 +225,7 @@ function processFile(input, output, file) {
 	open(input+ File.separator +file);
 	print(nSlices);
 	run("Duplicate...", " ");
-	saveAs("Tiff", output+File.separator+File.nameWithoutExtension+"_slice1.tiff");
+	saveAs("Tiff", output+File.separator+File.nameWithoutExtension+"_slice1" + suffix);
 	close();
 	close();
 	//or close("*")
@@ -261,7 +261,7 @@ function processFile(input, output, file) {
 	setSlice(5);
 	run("Duplicate...", " ");
 	run("Subtract Background...", "rolling=20");
-	saveAs("tiff", output+File.separator+File.nameWithoutExtension+"_slice5"+".tiff");
+	saveAs("tiff", output+File.separator+File.nameWithoutExtension+"_slice5"+ suffix);
 	close("*");
 }
 </code></pre>
@@ -298,7 +298,7 @@ function processFile(input, output, file) {
 		run("Subtract Background...", "rolling=20");
 		// Note: if you change the file type, e.g. to PNG, saveAs will yield the new name as File.nameWithoutExtension
 		// So then you will want to store the initial File.nameWithoutExtension in a variable before this loop
-		saveAs("tiff", output+File.separator+File.nameWithoutExtension+"_slice"+i+".tiff");
+		saveAs("tiff", output+File.separator+File.nameWithoutExtension+"_slice"+i+suffix);
 		close();
 	}
 	close();
@@ -334,13 +334,15 @@ function processFile(input, output, file) {
 		setSlice(i);
 		run("Duplicate...", " ");
 		run("Subtract Background...", "rolling=20");
-		saveAs("tiff", output+File.separator+File.nameWithoutExtension+"_slice"+i+".tiff");
+		// Note: if you change the file type, e.g. to PNG, saveAs will yield the new name as File.nameWithoutExtension
+		// So then you will want to store the initial File.nameWithoutExtension in a variable before this loop
+		saveAs("tiff", output+File.separator+File.nameWithoutExtension+"_slice"+i+suffix);
 		close();
 	}
 	run("Z Project...", "start=3 stop=7 projection=[Average Intensity]");
 	run("Set Measurements...", "mean redirect=None decimal=7");
 	run("Measure");
-	saveAs("tiff", output+File.separator+File.nameWithoutExtension+"_projection_BackSubtract.tiff");
+	saveAs("tiff", output+File.separator+File.nameWithoutExtension+"_projection_BackSubtract" + suffix);
 	close("*");
 }
 
