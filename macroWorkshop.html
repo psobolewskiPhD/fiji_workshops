@@ -296,6 +296,8 @@ function processFile(input, output, file) {
 		setSlice(i);
 		run("Duplicate...", " ");
 		run("Subtract Background...", "rolling=20");
+		// Note: if you change the file type, e.g. to PNG, saveAs will yield the new name as File.nameWithoutExtension
+		// So then you will want to store the initial File.nameWithoutExtension in a variable before this loop
 		saveAs("tiff", output+File.separator+File.nameWithoutExtension+"_slice"+i+".tiff");
 		close();
 	}
