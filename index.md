@@ -30,12 +30,19 @@ Fiji is distribution of ImageJ, which has over 25 years of broad usage in
 scientific image analysis. This two-session introductory workshop to Fiji 
 will focus on macros and scripting. Note: no prior coding experience is needed.
 ## [Intermediate Fiji Workshop: Macros and Scripting Workshop Materials](./IntermediateFiji_macros.html)
-The above link is to a set of slides and training materials written in HTML/CSS with 
-the [Reveal.js](https://github.com/hakimel/reveal.js) framework. 
+The above link is to a set of slides and training materials covering the basics of ImageJ macros.
+It is written in HTML/CSS with the [Reveal.js](https://github.com/hakimel/reveal.js) framework. 
 This is an updated, Fiji-only, fork of tutorial materials by
 [Erick Martins Ratamero](https://github.com/erickmartins/training), those
 in turns were inspired by <a href="https://slides.com/phivk/intro2python">slides</a>
 by <a href="https//github.com/phivk">Philo van Kemenade</a>.
+## [Intermediate Fiji Workshop: A proper ImageJ macro](./macroWorkshop.html)
+The above link is to a set of slides and training materials covering a set of exercises
+to step-by-step write a proper ImageJ macro and then install it into Fiji.
+It is written in HTML/CSS with the [Reveal.js](https://github.com/hakimel/reveal.js) framework. 
+This is an updated fork of tutorial materials by
+[Erick Martins Ratamero](https://github.com/erickmartins/training).
+
 
 # Licensing and reuse
 The [Reveal.js](https://github.com/hakimel/reveal.js) framework is used under the terms of [the MIT license](./LICENSE_REVEAL).
