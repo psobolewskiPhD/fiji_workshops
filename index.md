@@ -7,6 +7,7 @@ Two workshops are planned, an introduction one and a follow-up one that
 will get into macros and scripting. You can find descriptions and links
 to the materials below.
 
+<a id="intro-fiji"></a>
 # Introduction to Fiji Workshop
 Fiji is distribution of ImageJ, which has over 25 years of broad usage in 
 scientific image analysis. This two-session introductory workshop to Fiji 
@@ -25,6 +26,7 @@ in turns were heavily inspired by the original slides from
 [Dave Mason](https://mas.to/@dn_mason), then at the University of 
 Liverpool [Centre for Cell Imaging](http://cci.liv.ac.uk).
 
+<a id="intermediate-fiji"></a>
 # Intermediate Fiji Workshop: Macros and Scripting
 Fiji is distribution of ImageJ, which has over 25 years of broad usage in 
 scientific image analysis. This two-session introductory workshop to Fiji 
